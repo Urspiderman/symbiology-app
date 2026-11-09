@@ -1,0 +1,1 @@
+-- TODO: Migration 007 sensor_readings. No database objects created yet.

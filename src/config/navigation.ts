@@ -1,0 +1,1 @@
+export const navigation = [{label:"Beranda",href:"/dashboard",icon:"house"},{label:"Marketplace",href:"/marketplace",icon:"shopping-bag"},{label:"AI Studio",href:"/ai-studio",icon:"sparkles"},{label:"Akuaponikku",href:"/akuaponikku",icon:"activity"},{label:"Profil",href:"/profile",icon:"user-round"}] as const;

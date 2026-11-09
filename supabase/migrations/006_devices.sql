@@ -1,0 +1,1 @@
+-- TODO: Migration 006 devices. No database objects created yet.

@@ -1,0 +1,220 @@
+
+@import "tailwindcss";
+
+:root {
+  --background: #fffbf1;
+  --foreground: #194d33;
+
+  --cream: #fffbf1;
+  --cream-dark: #f4eedf;
+
+  --green: #194d33;
+  --green-mid: #28784a;
+  --green-light: #e7f3e4;
+
+  --yellow: #ffda57;
+  --yellow-light: #fff1b8;
+
+  --white: #ffffff;
+  --muted: #607665;
+  --border: #e6e8d9;
+
+  --radius-clay: 26px;
+
+  --shadow-clay:
+    8px 8px 20px rgba(45, 75, 49, 0.10),
+    -7px -7px 18px rgba(255, 255, 255, 0.95),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.65);
+
+  --shadow-clay-hover:
+    12px 14px 28px rgba(45, 75, 49, 0.15),
+    -6px -6px 18px rgba(255, 255, 255, 0.9),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.7);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-cream: var(--cream);
+  --color-green: var(--green);
+  --color-green-light: var(--green-light);
+  --color-yellow: var(--yellow);
+
+  --font-sans: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 3px solid var(--yellow);
+  outline-offset: 3px;
+}
+
+/* CLAYMORPHISM */
+
+.clay-card {
+  background: var(--cream);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: var(--radius-clay);
+  box-shadow: var(--shadow-clay);
+  transition:
+    transform 250ms ease,
+    box-shadow 250ms ease;
+}
+
+.clay-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-clay-hover);
+}
+
+.clay-card-green {
+  background: var(--green-light);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: var(--radius-clay);
+  box-shadow:
+    8px 9px 20px rgba(25, 77, 51, 0.13),
+    inset 3px 3px 5px rgba(255, 255, 255, 0.7),
+    inset -3px -3px 7px rgba(25, 77, 51, 0.05);
+}
+
+.clay-card-yellow {
+  background: var(--yellow);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: var(--radius-clay);
+  box-shadow:
+    8px 9px 20px rgba(133, 102, 18, 0.15),
+    inset 3px 3px 6px rgba(255, 255, 255, 0.45),
+    inset -3px -3px 7px rgba(133, 102, 18, 0.07);
+}
+
+.clay-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 16px;
+  background: var(--yellow);
+  color: var(--green);
+  font-weight: 700;
+  box-shadow:
+    4px 5px 0 rgba(135, 105, 23, 0.18),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.5);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.clay-button:hover {
+  transform: translateY(-2px);
+}
+
+.clay-button:active {
+  transform: translateY(2px) scale(0.98);
+  box-shadow:
+    1px 2px 0 rgba(135, 105, 23, 0.18),
+    inset 2px 2px 6px rgba(135, 105, 23, 0.12);
+}
+
+.clay-input {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: #fffdf7;
+  color: var(--foreground);
+  padding: 12px 16px;
+  box-shadow: inset 2px 3px 7px rgba(25, 77, 51, 0.05);
+}
+
+.clay-input:focus {
+  outline: none;
+  border-color: var(--green-mid);
+  box-shadow: 0 0 0 3px rgba(40, 120, 74, 0.12);
+}
+
+/* MOTION UTILITIES */
+
+.motion-fade-up {
+  animation: fade-up 550ms ease both;
+}
+
+.motion-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .clay-card:hover,
+  .clay-button:hover,
+  .clay-button:active {
+    transform: none;
+  }
+}

@@ -1,0 +1,1 @@
+export default function PageTitle({title,description}:{title:string;description:string}){return <header className="mb-6"><h1 className="text-2xl font-bold text-green-900">{title}</h1><p className="mt-2 text-sm text-gray-600">{description}</p></header>}

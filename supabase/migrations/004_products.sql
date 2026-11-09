@@ -1,0 +1,1 @@
+-- TODO: Migration 004 products. No database objects created yet.

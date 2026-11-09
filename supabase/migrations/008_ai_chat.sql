@@ -1,0 +1,1 @@
+-- TODO: Migration 008 ai_chat. No database objects created yet.

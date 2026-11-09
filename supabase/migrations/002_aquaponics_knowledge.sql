@@ -1,0 +1,1 @@
+-- TODO: Migration 002 aquaponics_knowledge. No database objects created yet.

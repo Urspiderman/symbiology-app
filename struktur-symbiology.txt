@@ -1,0 +1,282 @@
+﻿========== STRUKTUR APP ==========
+Folder PATH listing for volume DATA
+Volume serial number is 00000067 B4B2:84DB
+D:\DISAH BARU\SYMBIOLOGY-APP\SRC\APP
+|   error.tsx
+|   globals.css
+|   layout.tsx
+|   not-found.tsx
+|   page.tsx
+|   
++---(admin)
+|   \---admin
+|       |   layout.tsx
+|       |   page.tsx
+|       |   
+|       +---aquaponics-data
+|       |       page.tsx
+|       |       
+|       +---devices
+|       |       page.tsx
+|       |       
+|       +---orders
+|       |       page.tsx
+|       |       
+|       +---products
+|       |       page.tsx
+|       |       
+|       +---settings
+|       |       page.tsx
+|       |       
+|       \---users
+|               page.tsx
+|               
++---(auth)
+|   +---callback
+|   |       route.ts
+|   |       
+|   +---forgot-password
+|   |       page.tsx
+|   |       
+|   +---login
+|   |       page.tsx
+|   |       
+|   +---register
+|   |       page.tsx
+|   |       
+|   \---reset-password
+|           page.tsx
+|           
++---(public)
+|   +---onboarding
+|   |       page.tsx
+|   |       
+|   \---tentang
+|           page.tsx
+|           
++---(user)
+|   |   layout.tsx
+|   |   
+|   +---ai-studio
+|   |   |   page.tsx
+|   |   |   
+|   |   +---cost
+|   |   |   \---[designId]
+|   |   |           page.tsx
+|   |   |           
+|   |   +---designer-3d
+|   |   |   \---[designId]
+|   |   |           page.tsx
+|   |   |           
+|   |   +---input
+|   |   |       page.tsx
+|   |   |       
+|   |   +---recommendations
+|   |   |   \---[designId]
+|   |   |           page.tsx
+|   |   |           
+|   |   +---result
+|   |   |   \---[designId]
+|   |   |           page.tsx
+|   |   |           
+|   |   \---saved
+|   |           page.tsx
+|   |           
+|   +---akuaponikku
+|   |   |   page.tsx
+|   |   |   
+|   |   +---connect
+|   |   |       page.tsx
+|   |   |       
+|   |   +---history
+|   |   |       page.tsx
+|   |   |       
+|   |   \---[systemId]
+|   |           page.tsx
+|   |           
+|   +---dashboard
+|   |       page.tsx
+|   |       
+|   +---marketplace
+|   |   |   page.tsx
+|   |   |   
+|   |   +---checkout
+|   |   |       page.tsx
+|   |   |       
+|   |   \---orders
+|   |       |   page.tsx
+|   |       |   
+|   |       \---[orderId]
+|   |               page.tsx
+|   |               
+|   \---profile
+|       |   page.tsx
+|       |   
+|       +---edit
+|       |       page.tsx
+|       |       
+|       +---help
+|       |       page.tsx
+|       |       
+|       +---notifications
+|       |       page.tsx
+|       |       
+|       \---settings
+|               page.tsx
+|               
+\---api
+    +---ai
+    |   +---analyze-photo
+    |   |       route.ts
+    |   |       
+    |   +---chatbot
+    |   |       route.ts
+    |   |       
+    |   +---generate-design
+    |   |       route.ts
+    |   |       
+    |   +---predict-cost
+    |   |       route.ts
+    |   |       
+    |   +---recommend
+    |   |       route.ts
+    |   |       
+    |   \---render-photo
+    |           route.ts
+    |           
+    +---devices
+    |   +---commands
+    |   |       route.ts
+    |   |       
+    |   +---pairing
+    |   |       route.ts
+    |   |       
+    |   \---telemetry
+    |           route.ts
+    |           
+    +---payments
+    |   +---create
+    |   |       route.ts
+    |   |       
+    |   \---webhook
+    |           route.ts
+    |           
+    \---upload
+            route.ts
+            
+
+========== STRUKTUR LIB ==========
+Folder PATH listing for volume DATA
+Volume serial number is 000000A6 B4B2:84DB
+D:\DISAH BARU\SYMBIOLOGY-APP\SRC\LIB
++---ai
+|       client.ts
+|       image-generator.ts
+|       orchestrator.ts
+|       prompts.ts
+|       schemas.ts
+|       vision.ts
+|       
++---aquaponics
+|       compatibility-engine.ts
+|       cost-engine.ts
+|       design-engine.ts
+|       production-engine.ts
+|       safety-rules.ts
+|       sizing-engine.ts
+|       
++---iot
+|       alerts.ts
+|       commands.ts
+|       device-auth.ts
+|       telemetry.ts
+|       
++---payments
+|       midtrans.ts
+|       
++---supabase
+|       admin.ts
+|       client.ts
+|       server.ts
+|       
+\---utils
+        currency.ts
+        dates.ts
+        validators.ts
+        
+
+========== STRUKTUR COMPONENTS ==========
+Folder PATH listing for volume DATA
+Volume serial number is 000000E3 B4B2:84DB
+D:\DISAH BARU\SYMBIOLOGY-APP\SRC\COMPONENTS
++---ai-studio
+|       BudgetSlider.tsx
+|       ComponentList.tsx
+|       CostEstimator.tsx
+|       DesignGenerator.tsx
+|       DesignPreview.tsx
+|       FishRecommendation.tsx
+|       PhotoComparison.tsx
+|       PhotoUploader.tsx
+|       PlantRecommendation.tsx
+|       SaveDesignButton.tsx
+|       SpaceForm.tsx
+|       
++---akuaponikku
+|       DeviceControls.tsx
+|       DevicePairing.tsx
+|       MaintenanceReminder.tsx
+|       SensorCard.tsx
+|       SystemStatus.tsx
+|       WaterChart.tsx
+|       
++---auth
+|       AuthShell.tsx
+|       AuthVisual.tsx
+|       LogoutButton.tsx
+|       
++---chatbot
+|       ChatbotWidget.tsx
+|       ChatMessage.tsx
+|       ChatWindow.tsx
+|       
++---dashboard
+|       ActiveSystemCard.tsx
+|       QuickActions.tsx
+|       WaterSummary.tsx
+|       WelcomeCard.tsx
+|       
++---designer-3d
+|       AquaponicsCanvas.tsx
+|       DesignControls.tsx
+|       DimensionLabels.tsx
+|       Filter3D.tsx
+|       FishTank3D.tsx
+|       GrowBed3D.tsx
+|       Pipes3D.tsx
+|       
++---layout
+|       AdminSidebar.tsx
+|       AppHeader.tsx
+|       BottomNavigation.tsx
+|       CenterAIButton.tsx
+|       PageContainer.tsx
+|       
++---marketplace
+|       CartItem.tsx
+|       CheckoutForm.tsx
+|       OrderStatus.tsx
+|       ProductCard.tsx
+|       ProductFilters.tsx
+|       
+\---ui
+        Button.tsx
+        Card.tsx
+        EmptyState.tsx
+        Input.tsx
+        Loading.tsx
+        Modal.tsx
+        PageTitle.tsx
+        Tabs.tsx
+        Toast.tsx
+        
