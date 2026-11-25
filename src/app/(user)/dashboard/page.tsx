@@ -22,14 +22,14 @@ const quickActions = [
     desc: "Rancang akuaponik dengan bantuan AI",
     href: "/ai-studio",
     Icon: Sparkles,
-    bg: "bg-[#FFDA57]",
+    bg: "bg-[#FF70AD]",
   },
   {
     title: "Akuaponikku",
     desc: "Pantau sistem dan perangkat",
     href: "/akuaponikku",
     Icon: Activity,
-    bg: "bg-[#E7F3E4]",
+    bg: "bg-[#E2F0E9]",
   },
   {
     title: "Marketplace",
@@ -43,7 +43,7 @@ const quickActions = [
     desc: "Kelola akun dan preferensi",
     href: "/profile",
     Icon: Leaf,
-    bg: "bg-[#E7F3E4]",
+    bg: "bg-[#E2F0E9]",
   },
 ];
 
@@ -83,15 +83,15 @@ export default async function DashboardPage() {
   return (
     <div className="space-y-6">
       {/* HERO - DESAIN ASLI */}
-      <section className="motion-fade-up relative overflow-hidden rounded-[34px] bg-[#194D33] shadow-[12px_15px_30px_rgba(25,77,51,0.19),inset_3px_3px_8px_rgba(255,255,255,0.12)]">
+      <section className="motion-fade-up relative overflow-hidden rounded-[34px] bg-[#005B45] shadow-[12px_15px_30px_rgba(25,77,51,0.19),inset_3px_3px_8px_rgba(255,255,255,0.12)]">
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -left-16 -top-24 h-64 w-64 rounded-full bg-[#FFDA57]/10 blur-2xl"
+          className="pointer-events-none absolute -left-16 -top-24 h-64 w-64 rounded-full bg-[#FF70AD]/10 blur-2xl"
         />
 
         <div className="relative grid lg:grid-cols-[1.1fr_0.9fr]">
           <div className="flex flex-col justify-center p-7 sm:p-10 lg:p-12">
-            <span className="mb-5 inline-flex w-fit items-center gap-2 rounded-full bg-[#FFDA57] px-4 py-2 text-xs font-extrabold tracking-wide text-[#194D33] shadow-[inset_2px_2px_4px_rgba(255,255,255,0.55)]">
+            <span className="mb-5 inline-flex w-fit items-center gap-2 rounded-full bg-[#FF70AD] px-4 py-2 text-xs font-extrabold tracking-wide text-[#005B45] shadow-[inset_2px_2px_4px_rgba(255,255,255,0.55)]">
               <Leaf size={15} />
               GROW UR FUTURE
             </span>
@@ -128,7 +128,7 @@ export default async function DashboardPage() {
               sizes="(max-width: 1024px) 100vw, 45vw"
               className="object-cover"
             />
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#194D33]/40 to-transparent lg:bg-gradient-to-r lg:from-[#194D33] lg:to-transparent" />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#005B45]/40 to-transparent lg:bg-gradient-to-r lg:from-[#005B45] lg:to-transparent" />
           </div>
         </div>
       </section>
@@ -150,7 +150,7 @@ export default async function DashboardPage() {
 
         {/* AKSI CEPAT - DESAIN ASLI */}
         <article className="clay-card p-5 sm:p-6">
-          <h2 className="text-lg font-extrabold text-[#194D33]">
+          <h2 className="text-lg font-extrabold text-[#005B45]">
             Aksi Cepat
           </h2>
 
@@ -162,9 +162,9 @@ export default async function DashboardPage() {
                   href={href}
                   className={`flex min-h-[160px] flex-col justify-between rounded-[23px] border border-white/70 p-4 shadow-[5px_7px_15px_rgba(25,77,51,0.09),inset_2px_2px_5px_rgba(255,255,255,0.55)] transition duration-300 hover:-translate-y-1.5 ${bg}`}
                 >
-                  <Icon size={26} className="text-[#194D33]" />
+                  <Icon size={26} className="text-[#005B45]" />
                   <div>
-                    <h3 className="text-sm font-extrabold text-[#194D33]">
+                    <h3 className="text-sm font-extrabold text-[#005B45]">
                       {title}
                     </h3>
                     <p className="mt-1 text-xs leading-5 text-[#536E58]">
@@ -173,7 +173,7 @@ export default async function DashboardPage() {
                   </div>
                   <ArrowRight
                     size={16}
-                    className="self-end text-[#194D33]"
+                    className="self-end text-[#005B45]"
                   />
                 </Link>
               )
@@ -185,7 +185,7 @@ export default async function DashboardPage() {
         <article className="clay-card overflow-hidden">
           <div className="flex items-center gap-2 p-5 sm:p-6">
             <Sparkles size={20} className="text-[#D6A81B]" />
-            <h2 className="text-lg font-extrabold text-[#194D33]">
+            <h2 className="text-lg font-extrabold text-[#005B45]">
               Tips Akuaponik
             </h2>
           </div>
@@ -201,13 +201,13 @@ export default async function DashboardPage() {
           </div>
 
           <div className="p-5 sm:p-6">
-            <span className="rounded-full bg-[#FFDA57] px-3 py-1.5 text-xs font-bold text-[#194D33]">
+            <span className="rounded-full bg-[#FF70AD] px-3 py-1.5 text-xs font-bold text-[#005B45]">
               Tips Hari Ini
             </span>
-            <h3 className="mt-5 font-bold text-[#194D33]">
+            <h3 className="mt-5 font-bold text-[#005B45]">
               Jaga keseimbangan air dan tanaman
             </h3>
-            <p className="mt-3 text-sm leading-6 text-[#607665]">
+            <p className="mt-3 text-sm leading-6 text-[#62766D]">
               Periksa kualitas air secara berkala dan pastikan
               sirkulasi berjalan dengan baik agar ikan dan
               tanaman tumbuh optimal.
@@ -224,32 +224,32 @@ export default async function DashboardPage() {
         {/* MARKETPLACE - DESAIN ASLI */}
         <article className="clay-card p-6">
           <div className="flex items-center justify-between gap-3">
-            <h2 className="text-lg font-extrabold text-[#194D33]">
+            <h2 className="text-lg font-extrabold text-[#005B45]">
               Jelajahi Marketplace
             </h2>
             <Link
               href="/marketplace"
-              className="text-xs font-bold text-[#28784A]"
+              className="text-xs font-bold text-[#08785C]"
             >
               Lihat Semua
             </Link>
           </div>
 
-          <div className="mt-5 flex min-h-[160px] items-center gap-4 rounded-[24px] bg-[#FFF1B8] p-5">
-            <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-[22px] bg-[#FFDA57] text-[#194D33] shadow-[inset_2px_2px_5px_white,4px_5px_12px_rgba(135,105,23,0.15)]">
+          <div className="mt-5 flex min-h-[160px] items-center gap-4 rounded-[24px] bg-[#FFE0EE] p-5">
+            <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-[22px] bg-[#FF70AD] text-[#005B45] shadow-[inset_2px_2px_5px_white,4px_5px_12px_rgba(135,105,23,0.15)]">
               <ShoppingBag size={30} />
             </div>
             <div>
-              <h3 className="font-bold text-[#194D33]">
+              <h3 className="font-bold text-[#005B45]">
                 Kebutuhan akuaponik dalam satu tempat
               </h3>
-              <p className="mt-2 text-sm text-[#607665]">
+              <p className="mt-2 text-sm text-[#62766D]">
                 Jelajahi peralatan, bibit, dan kebutuhan
                 pendukung budidaya.
               </p>
               <Link
                 href="/marketplace"
-                className="mt-3 inline-flex items-center gap-1 text-sm font-bold text-[#194D33]"
+                className="mt-3 inline-flex items-center gap-1 text-sm font-bold text-[#005B45]"
               >
                 Buka Marketplace <ArrowRight size={15} />
               </Link>

@@ -147,7 +147,7 @@ export default function CheckoutForm() {
 
   if (loadingProduct) {
     return (
-      <div className="mx-auto max-w-4xl px-4 py-12 text-center text-[#194D33]">
+      <div className="mx-auto max-w-4xl px-4 py-12 text-center text-[#005B45]">
         Memuat produk...
       </div>
     );
@@ -159,7 +159,7 @@ export default function CheckoutForm() {
         <p className="mb-5 text-red-600">
           {error || "Produk tidak tersedia."}
         </p>
-        <Link href="/marketplace" className="font-bold text-[#194D33]">
+        <Link href="/marketplace" className="font-bold text-[#005B45]">
           Kembali ke Marketplace
         </Link>
       </div>
@@ -171,17 +171,17 @@ export default function CheckoutForm() {
       <div>
         <Link
           href="/marketplace"
-          className="mb-5 inline-flex items-center gap-2 text-sm font-semibold text-[#28784A]"
+          className="mb-5 inline-flex items-center gap-2 text-sm font-semibold text-[#08785C]"
         >
           <ArrowLeft size={17} />
           Kembali ke Marketplace
         </Link>
 
-        <h1 className="text-3xl font-extrabold text-[#194D33]">
+        <h1 className="text-3xl font-extrabold text-[#005B45]">
           Checkout
         </h1>
 
-        <p className="mt-2 text-sm text-[#718573]">
+        <p className="mt-2 text-sm text-[#62766D]">
           Konfirmasi pesanan dan lanjutkan pembayaran dengan aman.
         </p>
       </div>
@@ -191,15 +191,15 @@ export default function CheckoutForm() {
         className="grid gap-6 lg:grid-cols-[1.4fr_1fr]"
       >
         <div className="space-y-6">
-          <section className="rounded-3xl border border-[#E0E9DD] bg-white p-5 shadow-sm sm:p-7">
-            <h2 className="mb-6 flex items-center gap-2 text-lg font-extrabold text-[#194D33]">
+          <section className="rounded-3xl border border-[#DCE6DB] bg-white p-5 shadow-sm sm:p-7">
+            <h2 className="mb-6 flex items-center gap-2 text-lg font-extrabold text-[#005B45]">
               <MapPin size={21} />
               Informasi Pengiriman
             </h2>
 
             <div className="space-y-5">
               <div>
-                <label className="mb-2 block text-sm font-bold text-[#194D33]">
+                <label className="mb-2 block text-sm font-bold text-[#005B45]">
                   Nama Penerima
                 </label>
                 <input
@@ -208,12 +208,12 @@ export default function CheckoutForm() {
                   value={recipientName}
                   onChange={(e) => setRecipientName(e.target.value)}
                   placeholder="Nama lengkap penerima"
-                  className="w-full rounded-2xl border border-[#DDE7D8] bg-[#F4F7ED] px-4 py-3 outline-none focus:border-[#28784A]"
+                  className="w-full rounded-2xl border border-[#DCE6DB] bg-[#F3F7F2] px-4 py-3 outline-none focus:border-[#08785C]"
                 />
               </div>
 
               <div>
-                <label className="mb-2 block text-sm font-bold text-[#194D33]">
+                <label className="mb-2 block text-sm font-bold text-[#005B45]">
                   Nomor HP
                 </label>
                 <input
@@ -222,12 +222,12 @@ export default function CheckoutForm() {
                   value={recipientPhone}
                   onChange={(e) => setRecipientPhone(e.target.value)}
                   placeholder="08xxxxxxxxxx"
-                  className="w-full rounded-2xl border border-[#DDE7D8] bg-[#F4F7ED] px-4 py-3 outline-none focus:border-[#28784A]"
+                  className="w-full rounded-2xl border border-[#DCE6DB] bg-[#F3F7F2] px-4 py-3 outline-none focus:border-[#08785C]"
                 />
               </div>
 
               <div>
-                <label className="mb-2 block text-sm font-bold text-[#194D33]">
+                <label className="mb-2 block text-sm font-bold text-[#005B45]">
                   Alamat Lengkap
                 </label>
                 <textarea
@@ -237,7 +237,7 @@ export default function CheckoutForm() {
                   value={shippingAddress}
                   onChange={(e) => setShippingAddress(e.target.value)}
                   placeholder="Jalan, nomor rumah, kelurahan, kecamatan, kota, kode pos"
-                  className="w-full resize-none rounded-2xl border border-[#DDE7D8] bg-[#F4F7ED] px-4 py-3 outline-none focus:border-[#28784A]"
+                  className="w-full resize-none rounded-2xl border border-[#DCE6DB] bg-[#F3F7F2] px-4 py-3 outline-none focus:border-[#08785C]"
                 />
               </div>
             </div>
@@ -245,14 +245,14 @@ export default function CheckoutForm() {
         </div>
 
         <div>
-          <section className="rounded-3xl border border-[#E0E9DD] bg-white p-5 shadow-sm sm:p-7">
-            <h2 className="mb-5 flex items-center gap-2 text-lg font-extrabold text-[#194D33]">
+          <section className="rounded-3xl border border-[#DCE6DB] bg-white p-5 shadow-sm sm:p-7">
+            <h2 className="mb-5 flex items-center gap-2 text-lg font-extrabold text-[#005B45]">
               <Package size={21} />
               Ringkasan Pesanan
             </h2>
 
             <div className="flex gap-4">
-              <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-2xl bg-[#F4F7ED]">
+              <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-2xl bg-[#F3F7F2]">
                 <Image
                   src={
                     product.image_url ||
@@ -266,20 +266,20 @@ export default function CheckoutForm() {
               </div>
 
               <div>
-                <h3 className="font-bold text-[#194D33]">
+                <h3 className="font-bold text-[#005B45]">
                   {product.name}
                 </h3>
-                <p className="mt-2 font-extrabold text-[#28784A]">
+                <p className="mt-2 font-extrabold text-[#08785C]">
                   {formatRupiah(product.price)}
                 </p>
-                <p className="mt-1 text-xs text-[#718573]">
+                <p className="mt-1 text-xs text-[#62766D]">
                   Stok: {product.stock}
                 </p>
               </div>
             </div>
 
             <div className="mt-6 flex items-center justify-between">
-              <span className="text-sm text-[#718573]">
+              <span className="text-sm text-[#62766D]">
                 Jumlah Pembelian
               </span>
 
@@ -290,7 +290,7 @@ export default function CheckoutForm() {
                   onClick={() =>
                     setQuantity((q) => Math.max(1, q - 1))
                   }
-                  className="h-9 w-9 rounded-xl bg-[#F4F7ED] font-bold disabled:opacity-40"
+                  className="h-9 w-9 rounded-xl bg-[#F3F7F2] font-bold disabled:opacity-40"
                 >
                   −
                 </button>
@@ -307,19 +307,19 @@ export default function CheckoutForm() {
                       Math.min(product.stock, 100, q + 1)
                     )
                   }
-                  className="h-9 w-9 rounded-xl bg-[#F4F7ED] font-bold disabled:opacity-40"
+                  className="h-9 w-9 rounded-xl bg-[#F3F7F2] font-bold disabled:opacity-40"
                 >
                   +
                 </button>
               </div>
             </div>
 
-            <div className="mt-6 border-t border-[#E0E9DD] pt-5">
+            <div className="mt-6 border-t border-[#DCE6DB] pt-5">
               <div className="flex items-center justify-between">
-                <span className="font-semibold text-[#718573]">
+                <span className="font-semibold text-[#62766D]">
                   Total Pembayaran
                 </span>
-                <span className="text-xl font-extrabold text-[#194D33]">
+                <span className="text-xl font-extrabold text-[#005B45]">
                   {formatRupiah(total)}
                 </span>
               </div>
@@ -337,7 +337,7 @@ export default function CheckoutForm() {
             <button
               type="submit"
               disabled={submitting || product.stock < 1}
-              className="mt-6 flex h-14 w-full items-center justify-center gap-2 rounded-2xl bg-[#FFDA57] font-extrabold text-[#194D33] transition hover:bg-[#FFD43B] disabled:cursor-not-allowed disabled:opacity-50"
+              className="mt-6 flex h-14 w-full items-center justify-center gap-2 rounded-2xl bg-[#FF70AD] font-extrabold text-[#005B45] transition hover:bg-[#FFD43B] disabled:cursor-not-allowed disabled:opacity-50"
             >
               <CreditCard size={19} />
               {submitting
@@ -347,7 +347,7 @@ export default function CheckoutForm() {
                   : "Bayar Sekarang"}
             </button>
 
-            <div className="mt-4 flex items-center justify-center gap-2 text-xs text-[#718573]">
+            <div className="mt-4 flex items-center justify-center gap-2 text-xs text-[#62766D]">
               <ShieldCheck size={16} />
               Pembayaran diproses melalui Midtrans Sandbox
             </div>

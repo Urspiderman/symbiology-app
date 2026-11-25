@@ -24,7 +24,7 @@ export default function ConnectDevicePage() {
     return (
       <main className="p-8">
         <p>Pilih sistem akuaponik terlebih dahulu.</p>
-        <Link href="/akuaponikku" className="text-[#28784A] underline">
+        <Link href="/akuaponikku" className="text-[#08785C] underline">
           Kembali ke Akuaponikku
         </Link>
       </main>
@@ -53,24 +53,24 @@ export default function ConnectDevicePage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#FFFBF1] px-4 py-8 sm:px-6">
+    <main className="min-h-screen bg-[#FFFAE7] px-4 py-8 sm:px-6">
       <div className="mx-auto max-w-3xl space-y-6">
         <Link
           href={`/akuaponikku/${systemId}`}
-          className="inline-flex items-center gap-2 text-sm font-semibold text-[#28784A]"
+          className="inline-flex items-center gap-2 text-sm font-semibold text-[#08785C]"
         >
           <ArrowLeft size={17} />
           Kembali ke Monitoring
         </Link>
 
         <div>
-          <p className="text-sm font-semibold text-[#28784A]">
+          <p className="text-sm font-semibold text-[#08785C]">
             SYMBIOLOGY / Akuaponikku
           </p>
-          <h1 className="mt-1 text-3xl font-bold text-[#173D2B]">
+          <h1 className="mt-1 text-3xl font-bold text-[#003D2E]">
             Hubungkan Perangkat
           </h1>
-          <p className="mt-2 text-sm text-[#6A7B6E]">
+          <p className="mt-2 text-sm text-[#62766D]">
             Simulasi koneksi ESP32 Smart Controller.
           </p>
         </div>
@@ -81,23 +81,23 @@ export default function ConnectDevicePage() {
           yang terhubung.
         </div>
 
-        <section className="rounded-2xl border border-[#E1EADF] bg-white p-6">
+        <section className="rounded-2xl border border-[#DCE6DB] bg-white p-6">
           <div className="flex flex-col items-center text-center">
-            <div className="flex h-20 w-20 items-center justify-center rounded-2xl bg-[#EAF5EC] text-[#28784A]">
+            <div className="flex h-20 w-20 items-center justify-center rounded-2xl bg-[#E2F0E9] text-[#08785C]">
               <Cpu size={38} />
             </div>
 
-            <h2 className="mt-4 text-xl font-bold text-[#173D2B]">
+            <h2 className="mt-4 text-xl font-bold text-[#003D2E]">
               {state?.deviceName || "ESP32 Smart Controller"}
             </h2>
 
-            <p className="mt-2 text-sm text-[#6A7B6E]">
+            <p className="mt-2 text-sm text-[#62766D]">
               Pengendali sensor dan pompa akuaponik
             </p>
 
             <div className="mt-5">
               {state?.connected ? (
-                <span className="inline-flex items-center gap-2 rounded-full bg-[#EAF5EC] px-4 py-2 text-sm font-semibold text-[#28784A]">
+                <span className="inline-flex items-center gap-2 rounded-full bg-[#E2F0E9] px-4 py-2 text-sm font-semibold text-[#08785C]">
                   <CheckCircle2 size={17} />
                   Simulasi Terhubung
                 </span>
@@ -115,7 +115,7 @@ export default function ConnectDevicePage() {
               <button
                 type="button"
                 onClick={disconnect}
-                className="flex w-full items-center justify-center gap-2 rounded-xl border border-[#DCE8DE] py-3 font-semibold text-[#173D2B]"
+                className="flex w-full items-center justify-center gap-2 rounded-xl border border-[#DCE8DE] py-3 font-semibold text-[#003D2E]"
               >
                 <WifiOff size={18} />
                 Putuskan Simulasi
@@ -125,7 +125,7 @@ export default function ConnectDevicePage() {
                 type="button"
                 onClick={connect}
                 disabled={connecting || !state}
-                className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#28784A] py-3 font-semibold text-white disabled:opacity-50"
+                className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#08785C] py-3 font-semibold text-white disabled:opacity-50"
               >
                 <Wifi size={18} />
                 {connecting
@@ -138,7 +138,7 @@ export default function ConnectDevicePage() {
 
         <Link
           href={`/akuaponikku/${systemId}`}
-          className="block rounded-xl bg-[#EAF5EC] px-5 py-3 text-center text-sm font-semibold text-[#28784A]"
+          className="block rounded-xl bg-[#E2F0E9] px-5 py-3 text-center text-sm font-semibold text-[#08785C]"
         >
           Buka Dashboard Monitoring
         </Link>

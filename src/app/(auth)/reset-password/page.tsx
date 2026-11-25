@@ -80,7 +80,7 @@ export default function ResetPasswordPage() {
 
   return (
     <AuthShell mode="reset">
-      <span className="inline-flex rounded-full bg-[#FFDA57] px-4 py-2 text-xs font-extrabold tracking-wider">
+      <span className="inline-flex rounded-full bg-[#FF70AD] px-4 py-2 text-xs font-extrabold tracking-wider">
         KEAMANAN AKUN
       </span>
 
@@ -88,7 +88,7 @@ export default function ResetPasswordPage() {
         Atur Kata Sandi Baru
       </h1>
 
-      <p className="mt-3 text-sm leading-7 text-[#718573]">
+      <p className="mt-3 text-sm leading-7 text-[#62766D]">
         Buat kata sandi baru yang aman untuk akun SYMBIOLOGY.
       </p>
 
@@ -105,7 +105,7 @@ export default function ResetPasswordPage() {
               router.replace("/login");
               router.refresh();
             }}
-            className="flex h-14 w-full items-center justify-center gap-2 rounded-2xl bg-[#FFDA57] font-extrabold"
+            className="flex h-14 w-full items-center justify-center gap-2 rounded-2xl bg-[#FF70AD] font-extrabold"
           >
             Masuk Sekarang <ArrowRight size={18} />
           </button>
@@ -117,8 +117,8 @@ export default function ResetPasswordPage() {
               Kata Sandi Baru
             </label>
 
-            <div className="flex items-center gap-3 rounded-2xl border border-[#DDE7D8] bg-[#F4F7ED] px-4">
-              <LockKeyhole size={19} className="text-[#72917A]" />
+            <div className="flex items-center gap-3 rounded-2xl border border-[#DCE6DB] bg-[#F3F7F2] px-4">
+              <LockKeyhole size={19} className="text-[#688D7B]" />
               <input
                 id="new-password"
                 type={showPassword ? "text" : "password"}
@@ -145,8 +145,8 @@ export default function ResetPasswordPage() {
               Konfirmasi Kata Sandi
             </label>
 
-            <div className="flex items-center gap-3 rounded-2xl border border-[#DDE7D8] bg-[#F4F7ED] px-4">
-              <LockKeyhole size={19} className="text-[#72917A]" />
+            <div className="flex items-center gap-3 rounded-2xl border border-[#DCE6DB] bg-[#F3F7F2] px-4">
+              <LockKeyhole size={19} className="text-[#688D7B]" />
               <input
                 id="confirm-new-password"
                 type={showPassword ? "text" : "password"}
@@ -172,7 +172,7 @@ export default function ResetPasswordPage() {
             type="submit"
             disabled={loading}
             whileTap={{ scale: 0.97 }}
-            className="flex h-14 w-full items-center justify-center gap-3 rounded-2xl bg-[#FFDA57] font-extrabold shadow-[5px_6px_0_rgba(135,105,23,0.16)] disabled:opacity-60"
+            className="flex h-14 w-full items-center justify-center gap-3 rounded-2xl bg-[#FF70AD] font-extrabold shadow-[5px_6px_0_rgba(135,105,23,0.16)] disabled:opacity-60"
           >
             {loading ? "Menyimpan..." : "Simpan Kata Sandi"}
             {!loading && <ArrowRight size={19} />}
@@ -180,7 +180,7 @@ export default function ResetPasswordPage() {
         </form>
       )}
 
-      <Link href="/login" className="mt-8 inline-block text-sm font-bold text-[#28784A] hover:underline">
+      <Link href="/login" className="mt-8 inline-block text-sm font-bold text-[#08785C] hover:underline">
         Kembali ke Login
       </Link>
     </AuthShell>

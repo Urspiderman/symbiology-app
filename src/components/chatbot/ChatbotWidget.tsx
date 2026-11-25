@@ -15,9 +15,9 @@ export default function ChatbotWidget() {
           aria-label="Asisten SYMBIOLOGY"
           className="mb-3 flex h-[min(440px,60vh)] w-[min(350px,calc(100vw-32px))] flex-col overflow-hidden rounded-[24px] border border-[#E0E9DF] bg-white shadow-2xl"
         >
-          <div className="flex items-center justify-between bg-[#194D33] p-4 text-white">
+          <div className="flex items-center justify-between bg-[#005B45] p-4 text-white">
             <div className="flex items-center gap-2">
-              <Sparkles size={20} className="text-[#FFDA57]" />
+              <Sparkles size={20} className="text-[#FF70AD]" />
               <div>
                 <h3 className="font-bold">SYMBIO Assistant</h3>
                 <p className="text-xs text-white/75">
@@ -64,7 +64,7 @@ export default function ChatbotWidget() {
               type="submit"
               disabled
               aria-label="Kirim pesan"
-              className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#194D33] text-white disabled:opacity-50"
+              className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#005B45] text-white disabled:opacity-50"
             >
               <Send size={18} />
             </button>
@@ -77,7 +77,7 @@ export default function ChatbotWidget() {
         aria-label={open ? "Tutup asisten" : "Buka asisten"}
         aria-expanded={open}
         onClick={() => setOpen(!open)}
-        className="ml-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#194D33] text-white shadow-xl transition hover:scale-105"
+        className="ml-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#005B45] text-white shadow-xl transition hover:scale-105"
       >
         {open ? <X size={24} /> : <MessageCircle size={25} />}
       </button>

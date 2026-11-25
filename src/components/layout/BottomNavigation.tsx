@@ -1,24 +1,29 @@
-
 "use client";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { motion, useReducedMotion } from "motion/react";
 import {
   House,
-  ShoppingBag,
+  Users,
   Sparkles,
-  Activity,
+  ShoppingBag,
   UserRound,
 } from "lucide-react";
 
-const menus = [
-  { href: "/dashboard", label: "Beranda", Icon: House },
-  { href: "/marketplace", label: "Market", Icon: ShoppingBag },
-  { href: "/ai-studio", label: "AI Studio", Icon: Sparkles },
-  { href: "/akuaponikku", label: "Sistem", Icon: Activity },
-  { href: "/profile", label: "Profil", Icon: UserRound },
-];
+import { motion, useReducedMotion } from "motion/react";
+
+import {
+  navigation,
+  isNavigationActive,
+} from "@/config/navigation";
+
+const icons = {
+  house: House,
+  users: Users,
+  sparkles: Sparkles,
+  "shopping-bag": ShoppingBag,
+  "user-round": UserRound,
+};
 
 export default function BottomNavigation() {
   const pathname = usePathname();
@@ -27,47 +32,65 @@ export default function BottomNavigation() {
   return (
     <nav
       aria-label="Navigasi mobile"
-      className="fixed inset-x-0 bottom-0 z-40 border-t border-white bg-[#FFFBF1]/95 px-2 pb-[calc(env(safe-area-inset-bottom)+12px)] pt-2 shadow-[0_-8px_30px_rgba(25,77,51,0.13)] backdrop-blur-lg lg:hidden"
+      className="fixed inset-x-3 bottom-[calc(env(safe-area-inset-bottom)+12px)] z-40 mx-auto max-w-lg rounded-[28px] border border-white/10 bg-primary px-2 pb-3 pt-2 shadow-[0_10px_35px_rgba(0,91,69,0.28)] lg:hidden"
     >
-      <div className="mx-auto grid max-w-xl grid-cols-5 items-end gap-1">
-        {menus.map(({ href, label, Icon }, index) => {
-          const active =
-            pathname === href || pathname.startsWith(href + "/");
-          const isAI = index === 2;
+      <div className="grid grid-cols-5 items-end gap-1">
+
+        {navigation.map((menu) => {
+          const Icon = icons[menu.icon];
+
+          const active = isNavigationActive(
+            pathname,
+            menu.matchPaths
+          );
+
+          const isAI = menu.icon === "sparkles";
 
           return (
             <Link
-              key={href}
-              href={href}
+              key={menu.href}
+              href={menu.href}
               aria-current={active ? "page" : undefined}
-              className={`flex min-w-0 flex-col items-center justify-end gap-1 text-[10px] font-bold ${
-                active ? "text-[#194D33]" : "text-[#7B9180]"
-              }`}
+              className="flex min-w-0 flex-col items-center justify-end gap-1"
             >
+
               <motion.span
-                whileTap={reduceMotion ? undefined : { scale: 0.88 }}
-                animate={
+                whileTap={
                   reduceMotion
                     ? undefined
-                    : { y: active && !isAI ? -2 : 0 }
+                    : { scale: 0.9 }
                 }
                 className={
                   isAI
-                    ? "-mt-7 flex h-14 w-14 items-center justify-center rounded-full border-[5px] border-[#FFFBF1] bg-[#FFDA57] text-[#194D33] shadow-[5px_7px_14px_rgba(132,105,24,0.2),inset_2px_2px_5px_rgba(255,255,255,0.7)]"
-                    : `flex h-10 w-10 items-center justify-center rounded-2xl ${
+                    ? `-mt-7 flex h-[58px] w-[58px] items-center justify-center rounded-full border-[5px] border-primary bg-accent text-primary-dark shadow-lg ${
+                        active ? "ring-2 ring-background" : ""
+                      }`
+                    : `flex h-10 w-10 items-center justify-center rounded-2xl transition-colors ${
                         active
-                          ? "bg-[#E7F3E4] shadow-[inset_2px_2px_4px_white,3px_4px_9px_rgba(25,77,51,0.1)]"
-                          : ""
+                          ? "bg-background text-primary"
+                          : "text-background/80"
                       }`
                 }
               >
                 <Icon size={isAI ? 25 : 21} />
               </motion.span>
 
-              <span className="truncate">{label}</span>
+              <span
+                className={`max-w-full truncate text-[10px] font-semibold ${
+                  isAI
+                    ? "text-accent"
+                    : active
+                    ? "text-background"
+                    : "text-background/70"
+                }`}
+              >
+                {menu.shortLabel}
+              </span>
+
             </Link>
           );
         })}
+
       </div>
     </nav>
   );

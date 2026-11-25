@@ -169,22 +169,22 @@ export default function OrdersPage() {
       <div>
         <Link
           href="/marketplace"
-          className="mb-5 inline-flex items-center gap-2 text-sm font-bold text-[#28784A]"
+          className="mb-5 inline-flex items-center gap-2 text-sm font-bold text-[#08785C]"
         >
           <ArrowLeft size={17} />
           Kembali ke Marketplace
         </Link>
 
         <div className="flex items-center gap-3">
-          <div className="rounded-2xl bg-[#EAF3E5] p-3 text-[#194D33]">
+          <div className="rounded-2xl bg-[#E2F0E9] p-3 text-[#005B45]">
             <ShoppingBag size={25} />
           </div>
 
           <div>
-            <h1 className="text-2xl font-extrabold text-[#194D33] sm:text-3xl">
+            <h1 className="text-2xl font-extrabold text-[#005B45] sm:text-3xl">
               Pesanan Saya
             </h1>
-            <p className="mt-1 text-sm text-[#718573]">
+            <p className="mt-1 text-sm text-[#62766D]">
               Pantau riwayat pembelian dan pembayaranmu.
             </p>
           </div>
@@ -199,8 +199,8 @@ export default function OrdersPage() {
             onClick={() => setFilter(item.value)}
             className={`shrink-0 rounded-full px-5 py-2.5 text-sm font-bold transition ${
               filter === item.value
-                ? "bg-[#194D33] text-white"
-                : "border border-[#DDE7D8] bg-white text-[#718573] hover:bg-[#F4F7ED]"
+                ? "bg-[#005B45] text-white"
+                : "border border-[#DCE6DB] bg-white text-[#62766D] hover:bg-[#F3F7F2]"
             }`}
           >
             {item.label}
@@ -209,7 +209,7 @@ export default function OrdersPage() {
       </div>
 
       {loading ? (
-        <div className="rounded-3xl border border-[#E0E9DD] bg-white p-12 text-center text-[#718573]">
+        <div className="rounded-3xl border border-[#DCE6DB] bg-white p-12 text-center text-[#62766D]">
           Memuat pesanan...
         </div>
       ) : error ? (
@@ -222,20 +222,20 @@ export default function OrdersPage() {
           </div>
         </div>
       ) : visibleOrders.length === 0 ? (
-        <div className="rounded-3xl border border-[#E0E9DD] bg-white px-6 py-14 text-center">
+        <div className="rounded-3xl border border-[#DCE6DB] bg-white px-6 py-14 text-center">
           <Package
             size={46}
             className="mx-auto mb-4 text-[#87A38B]"
           />
-          <h2 className="text-lg font-extrabold text-[#194D33]">
+          <h2 className="text-lg font-extrabold text-[#005B45]">
             Belum Ada Pesanan
           </h2>
-          <p className="mt-2 text-sm text-[#718573]">
+          <p className="mt-2 text-sm text-[#62766D]">
             Pesanan yang kamu buat akan muncul di sini.
           </p>
           <Link
             href="/marketplace"
-            className="mt-6 inline-flex items-center gap-2 rounded-2xl bg-[#FFDA57] px-5 py-3 font-bold text-[#194D33]"
+            className="mt-6 inline-flex items-center gap-2 rounded-2xl bg-[#FF70AD] px-5 py-3 font-bold text-[#005B45]"
           >
             Jelajahi Marketplace
             <ArrowRight size={17} />
@@ -246,14 +246,14 @@ export default function OrdersPage() {
           {visibleOrders.map((order) => (
             <article
               key={order.id}
-              className="rounded-3xl border border-[#E0E9DD] bg-white p-5 shadow-sm sm:p-6"
+              className="rounded-3xl border border-[#DCE6DB] bg-white p-5 shadow-sm sm:p-6"
             >
               <div className="flex flex-wrap items-start justify-between gap-3 border-b border-[#EDF1E9] pb-4">
                 <div>
-                  <p className="text-xs font-semibold text-[#718573]">
+                  <p className="text-xs font-semibold text-[#62766D]">
                     {dateFormat(order.created_at)}
                   </p>
-                  <h2 className="mt-1 break-all font-extrabold text-[#194D33]">
+                  <h2 className="mt-1 break-all font-extrabold text-[#005B45]">
                     {order.order_number}
                   </h2>
                 </div>
@@ -274,22 +274,22 @@ export default function OrdersPage() {
                     className="flex items-start justify-between gap-4"
                   >
                     <div className="flex items-start gap-3">
-                      <div className="rounded-xl bg-[#F4F7ED] p-3 text-[#28784A]">
+                      <div className="rounded-xl bg-[#F3F7F2] p-3 text-[#08785C]">
                         <Package size={19} />
                       </div>
 
                       <div>
-                        <p className="font-bold text-[#194D33]">
+                        <p className="font-bold text-[#005B45]">
                           {item.product_name}
                         </p>
-                        <p className="mt-1 text-xs text-[#718573]">
+                        <p className="mt-1 text-xs text-[#62766D]">
                           {item.quantity} ×{" "}
                           {rupiah(item.unit_price)}
                         </p>
                       </div>
                     </div>
 
-                    <span className="text-sm font-bold text-[#194D33]">
+                    <span className="text-sm font-bold text-[#005B45]">
                       {rupiah(item.subtotal)}
                     </span>
                   </div>
@@ -298,10 +298,10 @@ export default function OrdersPage() {
 
               <div className="flex flex-wrap items-center justify-between gap-4 border-t border-[#EDF1E9] pt-4">
                 <div>
-                  <p className="text-xs text-[#718573]">
+                  <p className="text-xs text-[#62766D]">
                     Total Pembayaran
                   </p>
-                  <p className="mt-1 text-xl font-extrabold text-[#194D33]">
+                  <p className="mt-1 text-xl font-extrabold text-[#005B45]">
                     {rupiah(order.total_amount)}
                   </p>
                 </div>
@@ -309,7 +309,7 @@ export default function OrdersPage() {
                 <div className="flex flex-wrap gap-2">
                   <Link
                     href={`/marketplace/orders/${order.id}`}
-                    className="inline-flex items-center gap-2 rounded-xl border border-[#DDE7D8] px-4 py-2.5 text-sm font-bold text-[#194D33]"
+                    className="inline-flex items-center gap-2 rounded-xl border border-[#DCE6DB] px-4 py-2.5 text-sm font-bold text-[#005B45]"
                   >
                     Detail
                     <ArrowRight size={16} />
@@ -321,7 +321,7 @@ export default function OrdersPage() {
                         href={order.snap_redirect_url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 rounded-xl bg-[#FFDA57] px-4 py-2.5 text-sm font-bold text-[#194D33]"
+                        className="inline-flex items-center gap-2 rounded-xl bg-[#FF70AD] px-4 py-2.5 text-sm font-bold text-[#005B45]"
                       >
                         <CreditCard size={16} />
                         Bayar

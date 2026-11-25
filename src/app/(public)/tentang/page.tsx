@@ -26,21 +26,21 @@ const features = [
     description:
       "Rancang sistem akuaponik sesuai ruang, kebutuhan, dan anggaran dengan bantuan kecerdasan buatan.",
     Icon: Sparkles,
-    color: "bg-[#FFDA57]",
+    color: "bg-[#FF70AD]",
   },
   {
     title: "Smart Monitoring",
     description:
       "Hubungkan perangkat IoT untuk membantu memantau kondisi air dan ekosistem akuaponik.",
     Icon: Activity,
-    color: "bg-[#E7F3E4]",
+    color: "bg-[#E2F0E9]",
   },
   {
     title: "Marketplace",
     description:
       "Jelajahi berbagai kebutuhan akuaponik, mulai dari peralatan, bibit, hingga perlengkapan budidaya.",
     Icon: ShoppingBag,
-    color: "bg-[#FFF1B8]",
+    color: "bg-[#FFE0EE]",
   },
 ];
 
@@ -86,9 +86,9 @@ export default function TentangPage() {
   };
 
   return (
-    <main className="min-h-screen overflow-hidden bg-[#FFFBF1] text-[#194D33]">
+    <main className="min-h-screen overflow-hidden bg-[#FFFAE7] text-[#005B45]">
       {/* HEADER */}
-      <header className="sticky top-0 z-40 border-b border-[#E6EBDD] bg-[#FFFBF1]/95 backdrop-blur-xl">
+      <header className="sticky top-0 z-40 border-b border-[#DCE6DB] bg-[#FFFAE7]/95 backdrop-blur-xl">
         <div className="mx-auto flex h-[78px] max-w-[1400px] items-center justify-between gap-4 px-5 sm:px-8 lg:px-12">
           <Link
             href="/onboarding"
@@ -107,7 +107,7 @@ export default function TentangPage() {
 
           <Link
             href="/onboarding"
-            className="flex items-center gap-2 rounded-full border border-[#DDE7D8] bg-[#E7F3E4] px-4 py-2.5 text-xs font-bold text-[#194D33] transition hover:bg-[#FFDA57] sm:text-sm"
+            className="flex items-center gap-2 rounded-full border border-[#DCE6DB] bg-[#E2F0E9] px-4 py-2.5 text-xs font-bold text-[#005B45] transition hover:bg-[#FF70AD] sm:text-sm"
           >
             <ArrowLeft size={17} />
             Kembali
@@ -117,23 +117,23 @@ export default function TentangPage() {
 
       {/* HERO */}
       <section className="relative mx-auto max-w-[1400px] px-5 py-10 sm:px-8 lg:px-12 lg:py-16">
-        <div className="pointer-events-none absolute -left-20 top-10 h-80 w-80 rounded-full bg-[#E7F3E4] blur-3xl" />
+        <div className="pointer-events-none absolute -left-20 top-10 h-80 w-80 rounded-full bg-[#E2F0E9] blur-3xl" />
 
         <div className="relative grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
           <motion.div {...fadeUp}>
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#FFDA57] px-4 py-2 text-xs font-extrabold tracking-wider text-[#194D33] shadow-[inset_2px_2px_5px_rgba(255,255,255,0.6),4px_5px_12px_rgba(135,105,23,0.1)]">
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#FF70AD] px-4 py-2 text-xs font-extrabold tracking-wider text-[#005B45] shadow-[inset_2px_2px_5px_rgba(255,255,255,0.6),4px_5px_12px_rgba(135,105,23,0.1)]">
               <Leaf size={16} />
               ABOUT SYMBIOLOGY
             </span>
 
             <h1 className="mt-7 max-w-[650px] text-[38px] font-extrabold leading-[1.12] tracking-tight sm:text-5xl lg:text-[60px]">
               Grow Your Future,
-              <span className="mt-2 block text-[#28784A]">
+              <span className="mt-2 block text-[#08785C]">
                 Start from Home.
               </span>
             </h1>
 
-            <p className="mt-6 max-w-[570px] text-base leading-8 text-[#607665]">
+            <p className="mt-6 max-w-[570px] text-base leading-8 text-[#62766D]">
               SYMBIOLOGY adalah konsep platform akuaponik cerdas
               yang mengintegrasikan kecerdasan buatan (AI),
               Internet of Things (IoT), dan marketplace untuk
@@ -152,7 +152,7 @@ export default function TentangPage() {
 
               <Link
                 href="/onboarding"
-                className="flex items-center gap-2 rounded-2xl border border-[#DDE7D8] bg-[#E7F3E4] px-6 py-4 text-sm font-bold text-[#194D33] transition hover:-translate-y-1"
+                className="flex items-center gap-2 rounded-2xl border border-[#DCE6DB] bg-[#E2F0E9] px-6 py-4 text-sm font-bold text-[#005B45] transition hover:-translate-y-1"
               >
                 Lihat Pengenalan
               </Link>
@@ -167,9 +167,9 @@ export default function TentangPage() {
             }
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: reduceMotion ? 0 : 0.65 }}
-            className="relative flex min-h-[340px] items-center justify-center overflow-hidden rounded-[36px] bg-[#194D33] shadow-[12px_15px_30px_rgba(25,77,51,0.18),inset_3px_3px_8px_rgba(255,255,255,0.12)] sm:min-h-[470px]"
+            className="relative flex min-h-[340px] items-center justify-center overflow-hidden rounded-[36px] bg-[#005B45] shadow-[12px_15px_30px_rgba(25,77,51,0.18),inset_3px_3px_8px_rgba(255,255,255,0.12)] sm:min-h-[470px]"
           >
-            <div className="absolute h-[290px] w-[290px] rounded-full bg-[#FFDA57]/15 blur-2xl sm:h-[390px] sm:w-[390px]" />
+            <div className="absolute h-[290px] w-[290px] rounded-full bg-[#FF70AD]/15 blur-2xl sm:h-[390px] sm:w-[390px]" />
 
             <motion.div
               animate={
@@ -196,10 +196,10 @@ export default function TentangPage() {
       </section>
 
       {/* WHAT IS AQUAPONICS */}
-      <section className="bg-[#E7F3E4] py-16 lg:py-24">
+      <section className="bg-[#E2F0E9] py-16 lg:py-24">
         <div className="mx-auto grid max-w-[1400px] items-center gap-10 px-5 sm:px-8 lg:grid-cols-2 lg:gap-16 lg:px-12">
           <motion.div {...fadeUp} className="order-2 lg:order-1">
-            <div className="relative min-h-[310px] overflow-hidden rounded-[32px] border border-white/70 bg-[#FFFBF1] shadow-[8px_10px_25px_rgba(25,77,51,0.1),inset_2px_2px_6px_white] sm:min-h-[430px]">
+            <div className="relative min-h-[310px] overflow-hidden rounded-[32px] border border-white/70 bg-[#FFFAE7] shadow-[8px_10px_25px_rgba(25,77,51,0.1),inset_2px_2px_6px_white] sm:min-h-[430px]">
               <Image
                 src="/images/onboarding/onboarding-1.png"
                 alt="Tanaman dan ikan dalam ekosistem akuaponik"
@@ -211,18 +211,18 @@ export default function TentangPage() {
           </motion.div>
 
           <motion.div {...fadeUp} className="order-1 lg:order-2">
-            <span className="text-xs font-extrabold tracking-[0.2em] text-[#28784A]">
+            <span className="text-xs font-extrabold tracking-[0.2em] text-[#08785C]">
               KENALI AKUAPONIK
             </span>
 
             <h2 className="mt-4 text-3xl font-extrabold leading-tight sm:text-4xl lg:text-5xl">
               Satu Ekosistem,
-              <span className="block text-[#28784A]">
+              <span className="block text-[#08785C]">
                 Dua Kehidupan.
               </span>
             </h2>
 
-            <p className="mt-6 text-base leading-8 text-[#607665]">
+            <p className="mt-6 text-base leading-8 text-[#62766D]">
               Akuaponik menggabungkan budidaya ikan dan tanaman
               dalam sistem yang saling mendukung. Limbah
               metabolisme ikan diolah oleh mikroorganisme menjadi
@@ -246,7 +246,7 @@ export default function TentangPage() {
                 },
               ].map(({ Icon, text }) => (
                 <div key={text} className="flex items-start gap-3">
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#FFDA57] shadow-[inset_2px_2px_4px_white,3px_4px_9px_rgba(25,77,51,0.1)]">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#FF70AD] shadow-[inset_2px_2px_4px_white,3px_4px_9px_rgba(25,77,51,0.1)]">
                     <Icon size={21} />
                   </div>
                   <p className="pt-2 text-sm font-medium leading-6 text-[#355F43]">
@@ -262,7 +262,7 @@ export default function TentangPage() {
       {/* FEATURES */}
       <section className="mx-auto max-w-[1400px] px-5 py-16 sm:px-8 lg:px-12 lg:py-24">
         <motion.div {...fadeUp} className="text-center">
-          <span className="text-xs font-extrabold tracking-[0.2em] text-[#28784A]">
+          <span className="text-xs font-extrabold tracking-[0.2em] text-[#08785C]">
             OUR FEATURES
           </span>
 
@@ -270,7 +270,7 @@ export default function TentangPage() {
             Semua dalam Satu Ekosistem
           </h2>
 
-          <p className="mx-auto mt-5 max-w-[650px] text-base leading-7 text-[#607665]">
+          <p className="mx-auto mt-5 max-w-[650px] text-base leading-7 text-[#62766D]">
             Dari perencanaan hingga pemantauan, SYMBIOLOGY
             dirancang untuk mendukung perjalanan akuaponikmu.
           </p>
@@ -288,7 +288,7 @@ export default function TentangPage() {
               whileHover={
                 reduceMotion ? undefined : { y: -7 }
               }
-              className="rounded-[30px] border border-white bg-[#FFFBF1] p-7 shadow-[8px_10px_22px_rgba(25,77,51,0.1),inset_2px_2px_5px_white]"
+              className="rounded-[30px] border border-white bg-[#FFFAE7] p-7 shadow-[8px_10px_22px_rgba(25,77,51,0.1),inset_2px_2px_5px_white]"
             >
               <div
                 className={`flex h-16 w-16 items-center justify-center rounded-[22px] ${color} shadow-[inset_2px_2px_5px_white,4px_5px_12px_rgba(25,77,51,0.1)]`}
@@ -300,7 +300,7 @@ export default function TentangPage() {
                 {title}
               </h3>
 
-              <p className="mt-4 text-sm leading-7 text-[#607665]">
+              <p className="mt-4 text-sm leading-7 text-[#62766D]">
                 {description}
               </p>
             </motion.article>
@@ -309,10 +309,10 @@ export default function TentangPage() {
       </section>
 
       {/* HOW IT WORKS */}
-      <section className="bg-[#194D33] py-16 text-white lg:py-24">
+      <section className="bg-[#005B45] py-16 text-white lg:py-24">
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
           <motion.div {...fadeUp} className="text-center">
-            <span className="text-xs font-extrabold tracking-[0.2em] text-[#FFDA57]">
+            <span className="text-xs font-extrabold tracking-[0.2em] text-[#FF70AD]">
               HOW IT WORKS
             </span>
 
@@ -338,10 +338,10 @@ export default function TentangPage() {
                 className="rounded-[28px] border border-white/15 bg-white/10 p-6 shadow-[inset_2px_2px_5px_rgba(255,255,255,0.07)]"
               >
                 <div className="flex items-center justify-between">
-                  <span className="text-3xl font-extrabold text-[#FFDA57]">
+                  <span className="text-3xl font-extrabold text-[#FF70AD]">
                     {number}
                   </span>
-                  <Icon size={26} className="text-[#FFDA57]" />
+                  <Icon size={26} className="text-[#FF70AD]" />
                 </div>
 
                 <h3 className="mt-8 text-lg font-bold">
@@ -361,22 +361,22 @@ export default function TentangPage() {
       <section className="mx-auto max-w-[1400px] px-5 py-16 sm:px-8 lg:px-12 lg:py-24">
         <motion.div
           {...fadeUp}
-          className="grid items-center gap-8 rounded-[36px] bg-[#E7F3E4] p-7 shadow-[8px_10px_25px_rgba(25,77,51,0.08),inset_2px_2px_6px_white] sm:p-10 lg:grid-cols-2 lg:p-14"
+          className="grid items-center gap-8 rounded-[36px] bg-[#E2F0E9] p-7 shadow-[8px_10px_25px_rgba(25,77,51,0.08),inset_2px_2px_6px_white] sm:p-10 lg:grid-cols-2 lg:p-14"
         >
           <div>
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#FFDA57] px-4 py-2 text-xs font-extrabold">
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#FF70AD] px-4 py-2 text-xs font-extrabold">
               <HeartHandshake size={16} />
               OUR PURPOSE
             </span>
 
             <h2 className="mt-6 text-3xl font-extrabold leading-tight sm:text-4xl">
               Teknologi untuk
-              <span className="block text-[#28784A]">
+              <span className="block text-[#08785C]">
                 Masa Depan yang Hijau.
               </span>
             </h2>
 
-            <p className="mt-5 text-sm leading-8 text-[#607665] sm:text-base">
+            <p className="mt-5 text-sm leading-8 text-[#62766D] sm:text-base">
               SYMBIOLOGY bertujuan membuat akuaponik lebih
               mudah dipahami dan direncanakan oleh masyarakat,
               termasuk pemula yang ingin mencoba budidaya
@@ -393,11 +393,11 @@ export default function TentangPage() {
             ].map((item) => (
               <div
                 key={item}
-                className="flex items-center gap-3 rounded-2xl border border-white bg-[#FFFBF1] p-4 shadow-[3px_4px_12px_rgba(25,77,51,0.06)]"
+                className="flex items-center gap-3 rounded-2xl border border-white bg-[#FFFAE7] p-4 shadow-[3px_4px_12px_rgba(25,77,51,0.06)]"
               >
                 <CheckCircle2
                   size={22}
-                  className="shrink-0 text-[#28784A]"
+                  className="shrink-0 text-[#08785C]"
                 />
                 <span className="text-sm font-semibold">
                   {item}
@@ -412,13 +412,13 @@ export default function TentangPage() {
       <section className="px-5 pb-16 sm:px-8 lg:px-12 lg:pb-24">
         <motion.div
           {...fadeUp}
-          className="relative mx-auto max-w-[1400px] overflow-hidden rounded-[36px] bg-[#FFDA57] px-7 py-12 text-center shadow-[10px_12px_25px_rgba(135,105,23,0.12),inset_3px_3px_7px_rgba(255,255,255,0.5)] sm:px-12 lg:py-16"
+          className="relative mx-auto max-w-[1400px] overflow-hidden rounded-[36px] bg-[#FF70AD] px-7 py-12 text-center shadow-[10px_12px_25px_rgba(135,105,23,0.12),inset_3px_3px_7px_rgba(255,255,255,0.5)] sm:px-12 lg:py-16"
         >
           <div className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-white/20" />
-          <div className="pointer-events-none absolute -bottom-20 -left-16 h-56 w-56 rounded-full bg-[#194D33]/10" />
+          <div className="pointer-events-none absolute -bottom-20 -left-16 h-56 w-56 rounded-full bg-[#005B45]/10" />
 
           <div className="relative">
-            <Leaf size={38} className="mx-auto text-[#194D33]" />
+            <Leaf size={38} className="mx-auto text-[#005B45]" />
 
             <h2 className="mt-5 text-3xl font-extrabold sm:text-4xl">
               Siap Menumbuhkan Masa Depanmu?
@@ -432,7 +432,7 @@ export default function TentangPage() {
 
             <Link
               href="/login"
-              className="mt-8 inline-flex items-center gap-3 rounded-2xl bg-[#194D33] px-8 py-4 text-sm font-extrabold text-white shadow-[5px_6px_14px_rgba(25,77,51,0.18)] transition hover:-translate-y-1"
+              className="mt-8 inline-flex items-center gap-3 rounded-2xl bg-[#005B45] px-8 py-4 text-sm font-extrabold text-white shadow-[5px_6px_14px_rgba(25,77,51,0.18)] transition hover:-translate-y-1"
             >
               Mulai Sekarang
               <ArrowRight size={19} />
@@ -442,7 +442,7 @@ export default function TentangPage() {
       </section>
 
       {/* FOOTER */}
-      <footer className="border-t border-[#E6EBDD] px-5 py-8 sm:px-8">
+      <footer className="border-t border-[#DCE6DB] px-5 py-8 sm:px-8">
         <div className="mx-auto flex max-w-[1400px] flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
           <Image
             src="/images/logo/logo.svg"
@@ -452,13 +452,13 @@ export default function TentangPage() {
             className="h-auto w-[140px]"
           />
 
-          <p className="text-xs font-medium text-[#718573]">
+          <p className="text-xs font-medium text-[#62766D]">
             SYMBIOLOGY — Grow UR Future
           </p>
 
           <Link
             href="/onboarding"
-            className="text-sm font-bold text-[#194D33] hover:underline"
+            className="text-sm font-bold text-[#005B45] hover:underline"
           >
             Kembali ke Onboarding
           </Link>

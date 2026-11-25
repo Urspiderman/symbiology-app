@@ -75,7 +75,7 @@ const priorityOptions: {
 ];
 
 const inputClass =
-  "mt-2 w-full rounded-2xl border border-[#DDE7D8] bg-white px-4 py-3 text-sm text-[#194D33] outline-none transition focus:border-[#28784A] focus:ring-2 focus:ring-[#28784A]/10";
+  "mt-2 w-full rounded-2xl border border-[#DCE6DB] bg-white px-4 py-3 text-sm text-[#005B45] outline-none transition focus:border-[#08785C] focus:ring-2 focus:ring-[#08785C]/10";
 
 export default function SpaceDetailsForm({
   photoData,
@@ -197,38 +197,38 @@ export default function SpaceDetailsForm({
       className="space-y-6"
     >
       {/* HEADER DAN HASIL ANALISIS */}
-      <section className="rounded-3xl border border-[#E0E9DD] bg-white p-5 shadow-sm sm:p-8">
-        <span className="inline-flex rounded-full bg-[#EAF3E5] px-4 py-2 text-xs font-extrabold text-[#194D33]">
+      <section className="rounded-3xl border border-[#DCE6DB] bg-white p-5 shadow-sm sm:p-8">
+        <span className="inline-flex rounded-full bg-[#E2F0E9] px-4 py-2 text-xs font-extrabold text-[#005B45]">
           LANGKAH 2 — DETAIL RUANGAN
         </span>
 
-        <h2 className="mt-4 text-2xl font-extrabold text-[#194D33]">
+        <h2 className="mt-4 text-2xl font-extrabold text-[#005B45]">
           Sesuaikan dengan Ruanganmu
         </h2>
 
-        <p className="mt-2 text-sm leading-6 text-[#718573]">
+        <p className="mt-2 text-sm leading-6 text-[#62766D]">
           Lengkapi informasi berikut agar rancangan
           akuaponik dapat disesuaikan dengan ukuran
           area, anggaran, dan kebutuhanmu.
         </p>
 
-        <div className="mt-6 rounded-2xl bg-[#F4F7ED] p-5">
+        <div className="mt-6 rounded-2xl bg-[#F3F7F2] p-5">
           <div className="flex items-start gap-3">
             <CheckCircle2
               size={21}
-              className="mt-0.5 shrink-0 text-[#28784A]"
+              className="mt-0.5 shrink-0 text-[#08785C]"
             />
 
             <div>
-              <p className="font-extrabold text-[#194D33]">
+              <p className="font-extrabold text-[#005B45]">
                 Foto berhasil dianalisis
               </p>
 
-              <p className="mt-1 text-sm font-bold text-[#28784A]">
+              <p className="mt-1 text-sm font-bold text-[#08785C]">
                 {photoData.analysis.roomType}
               </p>
 
-              <p className="mt-2 text-sm leading-6 text-[#536B57]">
+              <p className="mt-2 text-sm leading-6 text-[#526A5E]">
                 {photoData.analysis.description}
               </p>
             </div>
@@ -237,25 +237,25 @@ export default function SpaceDetailsForm({
       </section>
 
       {/* UKURAN RUANGAN */}
-      <section className="rounded-3xl border border-[#E0E9DD] bg-white p-5 shadow-sm sm:p-8">
+      <section className="rounded-3xl border border-[#DCE6DB] bg-white p-5 shadow-sm sm:p-8">
         <div className="mb-6 flex items-center gap-3">
-          <div className="rounded-2xl bg-[#EAF3E5] p-3 text-[#194D33]">
+          <div className="rounded-2xl bg-[#E2F0E9] p-3 text-[#005B45]">
             <Ruler size={23} />
           </div>
 
           <div>
-            <h3 className="text-lg font-extrabold text-[#194D33]">
+            <h3 className="text-lg font-extrabold text-[#005B45]">
               Ukuran Area
             </h3>
 
-            <p className="text-sm text-[#718573]">
+            <p className="text-sm text-[#62766D]">
               Gunakan ukuran hasil pengukuran langsung.
             </p>
           </div>
         </div>
 
         <div className="grid gap-5 sm:grid-cols-2">
-          <label className="text-sm font-bold text-[#194D33]">
+          <label className="text-sm font-bold text-[#005B45]">
             Panjang Area (meter) *
             <input
               type="number"
@@ -272,7 +272,7 @@ export default function SpaceDetailsForm({
             />
           </label>
 
-          <label className="text-sm font-bold text-[#194D33]">
+          <label className="text-sm font-bold text-[#005B45]">
             Lebar Area (meter) *
             <input
               type="number"
@@ -289,7 +289,7 @@ export default function SpaceDetailsForm({
             />
           </label>
 
-          <label className="text-sm font-bold text-[#194D33] sm:col-span-2">
+          <label className="text-sm font-bold text-[#005B45] sm:col-span-2">
             Tinggi Tersedia (meter) — Opsional
             <input
               type="number"
@@ -307,12 +307,12 @@ export default function SpaceDetailsForm({
         </div>
 
         {area > 0 && Number.isFinite(area) && (
-          <div className="mt-5 rounded-2xl bg-[#EAF3E5] p-5">
-            <p className="text-xs font-bold text-[#718573]">
+          <div className="mt-5 rounded-2xl bg-[#E2F0E9] p-5">
+            <p className="text-xs font-bold text-[#62766D]">
               Luas Area Tersedia
             </p>
 
-            <p className="mt-1 text-2xl font-extrabold text-[#194D33]">
+            <p className="mt-1 text-2xl font-extrabold text-[#005B45]">
               {area.toLocaleString("id-ID", {
                 maximumFractionDigits: 2,
               })}{" "}
@@ -323,18 +323,18 @@ export default function SpaceDetailsForm({
       </section>
 
       {/* ANGGARAN */}
-      <section className="rounded-3xl border border-[#E0E9DD] bg-white p-5 shadow-sm sm:p-8">
+      <section className="rounded-3xl border border-[#DCE6DB] bg-white p-5 shadow-sm sm:p-8">
         <div className="mb-5 flex items-center gap-3">
-          <div className="rounded-2xl bg-[#FFF3C4] p-3 text-[#194D33]">
+          <div className="rounded-2xl bg-[#FFF3C4] p-3 text-[#005B45]">
             <Wallet size={23} />
           </div>
 
-          <h3 className="text-lg font-extrabold text-[#194D33]">
+          <h3 className="text-lg font-extrabold text-[#005B45]">
             Anggaran Instalasi
           </h3>
         </div>
 
-        <label className="block text-sm font-bold text-[#194D33]">
+        <label className="block text-sm font-bold text-[#005B45]">
           Anggaran Maksimal (Rp) *
           <input
             type="number"
@@ -351,25 +351,25 @@ export default function SpaceDetailsForm({
         </label>
 
         {Number(budget) > 0 && (
-          <p className="mt-3 text-sm font-extrabold text-[#28784A]">
+          <p className="mt-3 text-sm font-extrabold text-[#08785C]">
             Rp{Number(budget).toLocaleString("id-ID")}
           </p>
         )}
 
-        <p className="mt-3 text-xs leading-5 text-[#718573]">
+        <p className="mt-3 text-xs leading-5 text-[#62766D]">
           Anggaran digunakan sebagai batas perencanaan,
           bukan jaminan harga akhir komponen.
         </p>
       </section>
 
       {/* IKAN */}
-      <section className="rounded-3xl border border-[#E0E9DD] bg-white p-5 shadow-sm sm:p-8">
+      <section className="rounded-3xl border border-[#DCE6DB] bg-white p-5 shadow-sm sm:p-8">
         <div className="mb-5 flex items-center gap-3">
-          <div className="rounded-2xl bg-[#EAF3E5] p-3 text-[#194D33]">
+          <div className="rounded-2xl bg-[#E2F0E9] p-3 text-[#005B45]">
             <Fish size={23} />
           </div>
 
-          <h3 className="text-lg font-extrabold text-[#194D33]">
+          <h3 className="text-lg font-extrabold text-[#005B45]">
             Preferensi Ikan
           </h3>
         </div>
@@ -383,8 +383,8 @@ export default function SpaceDetailsForm({
               aria-pressed={fish === option.value}
               className={`rounded-2xl border p-4 text-left text-sm font-bold transition ${
                 fish === option.value
-                  ? "border-[#194D33] bg-[#EAF3E5] text-[#194D33]"
-                  : "border-[#DDE7D8] text-[#718573] hover:bg-[#F7FAF3]"
+                  ? "border-[#005B45] bg-[#E2F0E9] text-[#005B45]"
+                  : "border-[#DCE6DB] text-[#62766D] hover:bg-[#F7FAF3]"
               }`}
             >
               {option.label}
@@ -394,18 +394,18 @@ export default function SpaceDetailsForm({
       </section>
 
       {/* TANAMAN */}
-      <section className="rounded-3xl border border-[#E0E9DD] bg-white p-5 shadow-sm sm:p-8">
+      <section className="rounded-3xl border border-[#DCE6DB] bg-white p-5 shadow-sm sm:p-8">
         <div className="mb-5 flex items-center gap-3">
-          <div className="rounded-2xl bg-[#EAF3E5] p-3 text-[#194D33]">
+          <div className="rounded-2xl bg-[#E2F0E9] p-3 text-[#005B45]">
             <Leaf size={23} />
           </div>
 
-          <h3 className="text-lg font-extrabold text-[#194D33]">
+          <h3 className="text-lg font-extrabold text-[#005B45]">
             Tanaman yang Diinginkan
           </h3>
         </div>
 
-        <p className="mb-4 text-sm text-[#718573]">
+        <p className="mb-4 text-sm text-[#62766D]">
           Kamu bisa memilih lebih dari satu tanaman.
         </p>
 
@@ -421,8 +421,8 @@ export default function SpaceDetailsForm({
                 aria-pressed={selected}
                 className={`rounded-2xl border p-4 text-sm font-bold transition ${
                   selected
-                    ? "border-[#194D33] bg-[#EAF3E5] text-[#194D33]"
-                    : "border-[#DDE7D8] text-[#718573] hover:bg-[#F7FAF3]"
+                    ? "border-[#005B45] bg-[#E2F0E9] text-[#005B45]"
+                    : "border-[#DCE6DB] text-[#62766D] hover:bg-[#F7FAF3]"
                 }`}
               >
                 {plant}
@@ -433,12 +433,12 @@ export default function SpaceDetailsForm({
       </section>
 
       {/* PRIORITAS DESAIN */}
-      <section className="rounded-3xl border border-[#E0E9DD] bg-white p-5 shadow-sm sm:p-8">
-        <h3 className="text-lg font-extrabold text-[#194D33]">
+      <section className="rounded-3xl border border-[#DCE6DB] bg-white p-5 shadow-sm sm:p-8">
+        <h3 className="text-lg font-extrabold text-[#005B45]">
           Prioritas Desain
         </h3>
 
-        <p className="mt-2 text-sm text-[#718573]">
+        <p className="mt-2 text-sm text-[#62766D]">
           Tentukan aspek yang paling penting bagimu.
         </p>
 
@@ -451,22 +451,22 @@ export default function SpaceDetailsForm({
               aria-pressed={priority === option.value}
               className={`rounded-2xl border p-4 text-left transition ${
                 priority === option.value
-                  ? "border-[#194D33] bg-[#EAF3E5]"
-                  : "border-[#DDE7D8] hover:bg-[#F7FAF3]"
+                  ? "border-[#005B45] bg-[#E2F0E9]"
+                  : "border-[#DCE6DB] hover:bg-[#F7FAF3]"
               }`}
             >
-              <p className="text-sm font-extrabold text-[#194D33]">
+              <p className="text-sm font-extrabold text-[#005B45]">
                 {option.label}
               </p>
 
-              <p className="mt-2 text-xs leading-5 text-[#718573]">
+              <p className="mt-2 text-xs leading-5 text-[#62766D]">
                 {option.description}
               </p>
             </button>
           ))}
         </div>
 
-        <label className="mt-6 block text-sm font-bold text-[#194D33]">
+        <label className="mt-6 block text-sm font-bold text-[#005B45]">
           Catatan Tambahan — Opsional
           <textarea
             value={notes}
@@ -496,7 +496,7 @@ export default function SpaceDetailsForm({
         <button
           type="button"
           onClick={onBack}
-          className="inline-flex items-center justify-center gap-2 rounded-2xl border border-[#DDE7D8] px-6 py-4 font-bold text-[#194D33] transition hover:bg-[#F4F7ED]"
+          className="inline-flex items-center justify-center gap-2 rounded-2xl border border-[#DCE6DB] px-6 py-4 font-bold text-[#005B45] transition hover:bg-[#F3F7F2]"
         >
           <ArrowLeft size={19} />
           Kembali ke Foto
@@ -504,7 +504,7 @@ export default function SpaceDetailsForm({
 
         <button
           type="submit"
-          className="inline-flex flex-1 items-center justify-center gap-2 rounded-2xl bg-[#194D33] px-6 py-4 font-extrabold text-white transition hover:bg-[#246342]"
+          className="inline-flex flex-1 items-center justify-center gap-2 rounded-2xl bg-[#005B45] px-6 py-4 font-extrabold text-white transition hover:bg-[#246342]"
         >
           Lanjut ke Generate AI
           <ArrowRight size={19} />

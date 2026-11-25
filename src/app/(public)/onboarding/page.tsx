@@ -104,13 +104,13 @@ export default function OnboardingPage() {
   };
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-[#EAF2E4] text-[#194D33]">
+    <main className="relative min-h-screen overflow-hidden bg-[#EAF2E4] text-[#005B45]">
       {/* Background decorations */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 overflow-hidden"
       >
-        <div className="absolute -left-32 -top-32 h-[420px] w-[420px] rounded-full bg-[#FFDA57]/20 blur-3xl" />
+        <div className="absolute -left-32 -top-32 h-[420px] w-[420px] rounded-full bg-[#FF70AD]/20 blur-3xl" />
         <div className="absolute -bottom-40 -right-24 h-[440px] w-[440px] rounded-full bg-[#A8D5A4]/35 blur-3xl" />
       </div>
 
@@ -129,7 +129,7 @@ export default function OnboardingPage() {
           <button
             type="button"
             onClick={finishOnboarding}
-            className="rounded-full border border-[#C9DEC9] bg-[#FFFBF1]/70 px-5 py-2.5 text-sm font-bold text-[#194D33] transition hover:bg-[#FFDA57]"
+            className="rounded-full border border-[#C3D9CC] bg-[#FFFAE7]/70 px-5 py-2.5 text-sm font-bold text-[#005B45] transition hover:bg-[#FF70AD]"
           >
             Lewati
           </button>
@@ -140,15 +140,15 @@ export default function OnboardingPage() {
           <div className="grid w-full items-center gap-7 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12">
 
             {/* Illustration panel */}
-            <div className="relative order-1 flex min-h-[300px] items-center justify-center overflow-hidden rounded-[36px] border border-white/70 bg-[#194D33] shadow-[12px_15px_30px_rgba(25,77,51,0.17),inset_3px_3px_8px_rgba(255,255,255,0.12)] sm:min-h-[420px] lg:min-h-[590px]">
+            <div className="relative order-1 flex min-h-[300px] items-center justify-center overflow-hidden rounded-[36px] border border-white/70 bg-[#005B45] shadow-[12px_15px_30px_rgba(25,77,51,0.17),inset_3px_3px_8px_rgba(255,255,255,0.12)] sm:min-h-[420px] lg:min-h-[590px]">
               <div
                 aria-hidden="true"
-                className="absolute h-[230px] w-[230px] rounded-full bg-[#FFDA57]/20 blur-2xl sm:h-[350px] sm:w-[350px]"
+                className="absolute h-[230px] w-[230px] rounded-full bg-[#FF70AD]/20 blur-2xl sm:h-[350px] sm:w-[350px]"
               />
 
               <div
                 aria-hidden="true"
-                className="absolute -right-14 -top-14 h-44 w-44 rounded-full border-[30px] border-[#FFDA57]/15"
+                className="absolute -right-14 -top-14 h-44 w-44 rounded-full border-[30px] border-[#FF70AD]/15"
               />
 
               <div
@@ -209,7 +209,7 @@ export default function OnboardingPage() {
                   exit="exit"
                   transition={{ duration: reduceMotion ? 0 : 0.3 }}
                 >
-                  <span className="inline-flex items-center gap-2 rounded-full border border-white bg-[#FFDA57] px-4 py-2 text-xs font-extrabold tracking-wider text-[#194D33] shadow-[3px_4px_10px_rgba(135,105,23,0.1),inset_2px_2px_4px_rgba(255,255,255,0.5)]">
+                  <span className="inline-flex items-center gap-2 rounded-full border border-white bg-[#FF70AD] px-4 py-2 text-xs font-extrabold tracking-wider text-[#005B45] shadow-[3px_4px_10px_rgba(135,105,23,0.1),inset_2px_2px_4px_rgba(255,255,255,0.5)]">
                     <slide.Icon size={15} />
                     {slide.eyebrow}
                   </span>
@@ -220,12 +220,12 @@ export default function OnboardingPage() {
 
                   <h1 className="mt-4 max-w-[640px] text-[36px] font-extrabold leading-[1.12] tracking-tight sm:text-5xl lg:text-[56px] xl:text-[64px]">
                     {slide.title}
-                    <span className="mt-2 block text-[#28784A]">
+                    <span className="mt-2 block text-[#08785C]">
                       {slide.highlight}
                     </span>
                   </h1>
 
-                  <p className="mt-6 max-w-[520px] text-[15px] leading-7 text-[#607665] sm:text-lg sm:leading-8">
+                  <p className="mt-6 max-w-[520px] text-[15px] leading-7 text-[#62766D] sm:text-lg sm:leading-8">
                     {slide.description}
                   </p>
                 </motion.div>
@@ -249,7 +249,7 @@ export default function OnboardingPage() {
                       animate={{
                         width: step === index ? 42 : 11,
                         backgroundColor:
-                          step === index ? "#194D33" : "#B8D0BA",
+                          step === index ? "#005B45" : "#B7CEC2",
                       }}
                       transition={
                         reduceMotion
@@ -269,7 +269,7 @@ export default function OnboardingPage() {
                   onClick={previousSlide}
                   disabled={step === 0}
                   whileTap={reduceMotion ? undefined : { scale: 0.94 }}
-                  className="flex h-14 w-14 items-center justify-center rounded-2xl border border-white bg-[#FFFBF1] text-[#194D33] shadow-[4px_5px_12px_rgba(25,77,51,0.1),inset_2px_2px_4px_white] disabled:cursor-not-allowed disabled:opacity-40"
+                  className="flex h-14 w-14 items-center justify-center rounded-2xl border border-white bg-[#FFFAE7] text-[#005B45] shadow-[4px_5px_12px_rgba(25,77,51,0.1),inset_2px_2px_4px_white] disabled:cursor-not-allowed disabled:opacity-40"
                   aria-label="Slide sebelumnya"
                 >
                   <ArrowLeft size={21} />
@@ -280,7 +280,7 @@ export default function OnboardingPage() {
                   onClick={nextSlide}
                   whileHover={reduceMotion ? undefined : { y: -3 }}
                   whileTap={reduceMotion ? undefined : { scale: 0.96 }}
-                  className="flex h-14 min-w-[170px] items-center justify-center gap-3 rounded-2xl bg-[#FFDA57] px-7 text-sm font-extrabold text-[#194D33] shadow-[5px_6px_0_rgba(135,105,23,0.16),inset_2px_2px_5px_rgba(255,255,255,0.55)] sm:min-w-[200px]"
+                  className="flex h-14 min-w-[170px] items-center justify-center gap-3 rounded-2xl bg-[#FF70AD] px-7 text-sm font-extrabold text-[#005B45] shadow-[5px_6px_0_rgba(135,105,23,0.16),inset_2px_2px_5px_rgba(255,255,255,0.55)] sm:min-w-[200px]"
                 >
                   {isLast ? "Mulai Sekarang" : "Lanjut"}
                   <ArrowRight size={20} />
@@ -291,11 +291,11 @@ export default function OnboardingPage() {
 <div className="mt-8 flex flex-wrap items-center gap-3 text-xs font-medium text-[#819783]">
   <span>Smart Aquaponics • Powered by AI & IoT</span>
 
-  <span className="text-[#B8CBB8]">•</span>
+  <span className="text-[#B7CEC2]">•</span>
 
   <Link
     href="/tentang"
-    className="font-bold text-[#194D33] underline-offset-4 transition hover:underline"
+    className="font-bold text-[#005B45] underline-offset-4 transition hover:underline"
   >
     Tentang SYMBIOLOGY
   </Link>

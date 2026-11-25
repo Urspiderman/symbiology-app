@@ -184,17 +184,17 @@ export default function SpaceForm({
 
   return (
     <div className="space-y-6">
-      <section className="rounded-3xl border border-[#E0E9DD] bg-white p-5 shadow-sm sm:p-8">
+      <section className="rounded-3xl border border-[#DCE6DB] bg-white p-5 shadow-sm sm:p-8">
         <div className="mb-6">
-          <span className="inline-flex rounded-full bg-[#EAF3E5] px-4 py-2 text-xs font-extrabold text-[#194D33]">
+          <span className="inline-flex rounded-full bg-[#E2F0E9] px-4 py-2 text-xs font-extrabold text-[#005B45]">
             LANGKAH 1 — FOTO RUANGAN
           </span>
 
-          <h2 className="mt-4 text-2xl font-extrabold text-[#194D33]">
+          <h2 className="mt-4 text-2xl font-extrabold text-[#005B45]">
             Tunjukkan Ruanganmu
           </h2>
 
-          <p className="mt-2 text-sm leading-6 text-[#718573]">
+          <p className="mt-2 text-sm leading-6 text-[#62766D]">
             Ambil foto menggunakan kamera atau unggah
             dari galeri. AI SYMBIOLOGY akan menganalisis
             kondisi visual ruangan untuk membantu
@@ -223,15 +223,15 @@ export default function SpaceForm({
 
         {!preview ? (
           <div className="rounded-3xl border-2 border-dashed border-[#C7D9C4] bg-[#F7FAF3] p-7 text-center sm:p-12">
-            <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-3xl bg-[#E5F0DF] text-[#194D33]">
+            <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-3xl bg-[#E5F0DF] text-[#005B45]">
               <ImagePlus size={36} />
             </div>
 
-            <h3 className="mt-5 text-lg font-extrabold text-[#194D33]">
+            <h3 className="mt-5 text-lg font-extrabold text-[#005B45]">
               Tambahkan Foto Ruangan
             </h3>
 
-            <p className="mx-auto mt-2 max-w-sm text-sm leading-6 text-[#718573]">
+            <p className="mx-auto mt-2 max-w-sm text-sm leading-6 text-[#62766D]">
               Pastikan area yang akan digunakan terlihat
               jelas, termasuk lantai, dinding, dan benda
               di sekitarnya.
@@ -241,7 +241,7 @@ export default function SpaceForm({
               <button
                 type="button"
                 onClick={() => cameraRef.current?.click()}
-                className="inline-flex items-center justify-center gap-2 rounded-2xl bg-[#194D33] px-6 py-3 font-bold text-white transition hover:bg-[#246342]"
+                className="inline-flex items-center justify-center gap-2 rounded-2xl bg-[#005B45] px-6 py-3 font-bold text-white transition hover:bg-[#246342]"
               >
                 <Camera size={19} />
                 Ambil Foto
@@ -250,7 +250,7 @@ export default function SpaceForm({
               <button
                 type="button"
                 onClick={() => galleryRef.current?.click()}
-                className="inline-flex items-center justify-center gap-2 rounded-2xl bg-[#FFDA57] px-6 py-3 font-bold text-[#194D33] transition hover:brightness-95"
+                className="inline-flex items-center justify-center gap-2 rounded-2xl bg-[#FF70AD] px-6 py-3 font-bold text-[#005B45] transition hover:brightness-95"
               >
                 <Upload size={19} />
                 Pilih dari Galeri
@@ -259,7 +259,7 @@ export default function SpaceForm({
           </div>
         ) : (
           <div className="space-y-5">
-            <div className="overflow-hidden rounded-3xl border border-[#E0E9DD] bg-[#F7FAF3]">
+            <div className="overflow-hidden rounded-3xl border border-[#DCE6DB] bg-[#F7FAF3]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={preview}
@@ -273,7 +273,7 @@ export default function SpaceForm({
                 type="button"
                 onClick={() => galleryRef.current?.click()}
                 disabled={loading}
-                className="inline-flex items-center gap-2 rounded-xl border border-[#DDE7D8] px-4 py-3 text-sm font-bold text-[#194D33] disabled:opacity-50"
+                className="inline-flex items-center gap-2 rounded-xl border border-[#DCE6DB] px-4 py-3 text-sm font-bold text-[#005B45] disabled:opacity-50"
               >
                 <RefreshCw size={17} />
                 Ganti Foto
@@ -283,7 +283,7 @@ export default function SpaceForm({
                 type="button"
                 onClick={resetPhoto}
                 disabled={loading}
-                className="rounded-xl px-4 py-3 text-sm font-bold text-[#718573] disabled:opacity-50"
+                className="rounded-xl px-4 py-3 text-sm font-bold text-[#62766D] disabled:opacity-50"
               >
                 Hapus Foto
               </button>
@@ -291,7 +291,7 @@ export default function SpaceForm({
 
             {!analysis && (
               <div className="space-y-4">
-                <label className="flex cursor-pointer items-start gap-3 rounded-2xl border border-[#DDE7D8] bg-[#F4F7ED] p-4 text-sm leading-6 text-[#536B57]">
+                <label className="flex cursor-pointer items-start gap-3 rounded-2xl border border-[#DCE6DB] bg-[#F3F7F2] p-4 text-sm leading-6 text-[#526A5E]">
                   <input
                     type="checkbox"
                     checked={aiConsent}
@@ -299,7 +299,7 @@ export default function SpaceForm({
                       setAiConsent(event.target.checked)
                     }
                     disabled={loading}
-                    className="mt-1 h-4 w-4 shrink-0 accent-[#194D33]"
+                    className="mt-1 h-4 w-4 shrink-0 accent-[#005B45]"
                   />
 
                   <span>
@@ -315,7 +315,7 @@ export default function SpaceForm({
                   type="button"
                   onClick={analyzePhoto}
                   disabled={loading || !aiConsent}
-                  className="flex w-full items-center justify-center gap-3 rounded-2xl bg-[#FFDA57] px-6 py-4 font-extrabold text-[#194D33] transition hover:brightness-95 disabled:cursor-not-allowed disabled:opacity-60"
+                  className="flex w-full items-center justify-center gap-3 rounded-2xl bg-[#FF70AD] px-6 py-4 font-extrabold text-[#005B45] transition hover:brightness-95 disabled:cursor-not-allowed disabled:opacity-60"
                 >
                   {loading ? (
                     <>
@@ -348,47 +348,47 @@ export default function SpaceForm({
       </section>
 
       {analysis && (
-        <section className="space-y-6 rounded-3xl border border-[#E0E9DD] bg-white p-5 shadow-sm sm:p-8">
+        <section className="space-y-6 rounded-3xl border border-[#DCE6DB] bg-white p-5 shadow-sm sm:p-8">
           <div className="flex items-start gap-3">
-            <div className="rounded-2xl bg-[#EAF3E5] p-3 text-[#194D33]">
+            <div className="rounded-2xl bg-[#E2F0E9] p-3 text-[#005B45]">
               <ScanEye size={24} />
             </div>
 
             <div>
-              <h3 className="text-xl font-extrabold text-[#194D33]">
+              <h3 className="text-xl font-extrabold text-[#005B45]">
                 Hasil Analisis AI
               </h3>
 
-              <p className="mt-1 text-xs text-[#718573]">
+              <p className="mt-1 text-xs text-[#62766D]">
                 Keyakinan penilaian AI:{" "}
                 {analysis.confidence}
               </p>
             </div>
           </div>
 
-          <div className="rounded-2xl bg-[#F4F7ED] p-5">
-            <p className="text-sm font-extrabold text-[#194D33]">
+          <div className="rounded-2xl bg-[#F3F7F2] p-5">
+            <p className="text-sm font-extrabold text-[#005B45]">
               {analysis.roomType}
             </p>
 
-            <p className="mt-2 text-sm leading-7 text-[#536B57]">
+            <p className="mt-2 text-sm leading-7 text-[#526A5E]">
               {analysis.description}
             </p>
           </div>
 
           <div>
-            <h4 className="font-extrabold text-[#194D33]">
+            <h4 className="font-extrabold text-[#005B45]">
               Kondisi Pencahayaan
             </h4>
 
-            <p className="mt-2 text-sm leading-6 text-[#718573]">
+            <p className="mt-2 text-sm leading-6 text-[#62766D]">
               {analysis.lighting}
             </p>
           </div>
 
           {analysisSections.map((section) => (
             <div key={section.title}>
-              <h4 className="mb-3 font-extrabold text-[#194D33]">
+              <h4 className="mb-3 font-extrabold text-[#005B45]">
                 {section.title}
               </h4>
 
@@ -397,18 +397,18 @@ export default function SpaceForm({
                   {section.items.map((item, index) => (
                     <li
                       key={index}
-                      className="flex items-start gap-3 text-sm leading-6 text-[#718573]"
+                      className="flex items-start gap-3 text-sm leading-6 text-[#62766D]"
                     >
                       <CheckCircle2
                         size={18}
-                        className="mt-1 shrink-0 text-[#28784A]"
+                        className="mt-1 shrink-0 text-[#08785C]"
                       />
                       <span>{item}</span>
                     </li>
                   ))}
                 </ul>
               ) : (
-                <p className="text-sm text-[#718573]">
+                <p className="text-sm text-[#62766D]">
                   Tidak ada temuan khusus.
                 </p>
               )}
@@ -436,7 +436,7 @@ export default function SpaceForm({
             <button
               type="button"
               onClick={continueToNextStep}
-              className="flex w-full items-center justify-center gap-2 rounded-2xl bg-[#194D33] px-6 py-4 font-extrabold text-white transition hover:bg-[#246342]"
+              className="flex w-full items-center justify-center gap-2 rounded-2xl bg-[#005B45] px-6 py-4 font-extrabold text-white transition hover:bg-[#246342]"
             >
               Lanjut ke Detail Ruangan
               <ArrowRight size={19} />
@@ -449,7 +449,7 @@ export default function SpaceForm({
             </div>
           )}
 
-          <p className="text-xs leading-5 text-[#718573]">
+          <p className="text-xs leading-5 text-[#62766D]">
             Analisis ini berdasarkan foto yang terlihat.
             Ukuran sebenarnya, kekuatan lantai,
             pencahayaan aktual, serta keamanan

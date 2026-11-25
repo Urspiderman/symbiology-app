@@ -14,7 +14,7 @@ const metrics = {
   temperature: {
     label: "Suhu Air",
     unit: "°C",
-    color: "#28784A",
+    color: "#08785C",
     min: 24,
     max: 32,
   },
@@ -45,7 +45,7 @@ export default function MonitoringHistoryPage() {
     return (
       <main className="p-8">
         <p>Pilih sistem dari halaman Akuaponikku terlebih dahulu.</p>
-        <Link href="/akuaponikku" className="text-[#28784A] underline">
+        <Link href="/akuaponikku" className="text-[#08785C] underline">
           Kembali ke daftar sistem
         </Link>
       </main>
@@ -86,24 +86,24 @@ export default function MonitoringHistoryPage() {
     .join(" ");
 
   return (
-    <main className="min-h-screen bg-[#FFFBF1] px-4 py-8 sm:px-6 lg:px-10">
+    <main className="min-h-screen bg-[#FFFAE7] px-4 py-8 sm:px-6 lg:px-10">
       <div className="mx-auto max-w-6xl space-y-6">
         <Link
           href={`/akuaponikku/${systemId}`}
-          className="inline-flex items-center gap-2 text-sm font-semibold text-[#28784A]"
+          className="inline-flex items-center gap-2 text-sm font-semibold text-[#08785C]"
         >
           <ArrowLeft size={17} />
           Kembali ke Monitoring
         </Link>
 
         <div>
-          <p className="text-sm font-semibold text-[#28784A]">
+          <p className="text-sm font-semibold text-[#08785C]">
             SYMBIOLOGY / Akuaponikku
           </p>
-          <h1 className="mt-1 text-3xl font-bold text-[#173D2B]">
+          <h1 className="mt-1 text-3xl font-bold text-[#003D2E]">
             Riwayat Monitoring
           </h1>
-          <p className="mt-2 text-sm text-[#6A7B6E]">
+          <p className="mt-2 text-sm text-[#62766D]">
             Riwayat pembacaan simulasi sistem akuaponik.
           </p>
         </div>
@@ -123,14 +123,14 @@ export default function MonitoringHistoryPage() {
               onClick={() => setMetric(key)}
               className={`rounded-2xl border p-5 text-left ${
                 metric === key
-                  ? "border-[#28784A] bg-[#EAF5EC]"
-                  : "border-[#E1EADF] bg-white"
+                  ? "border-[#08785C] bg-[#E2F0E9]"
+                  : "border-[#DCE6DB] bg-white"
               }`}
             >
-              <p className="text-sm text-[#6A7B6E]">
+              <p className="text-sm text-[#62766D]">
                 {metrics[key].label}
               </p>
-              <p className="mt-2 text-2xl font-bold text-[#173D2B]">
+              <p className="mt-2 text-2xl font-bold text-[#003D2E]">
                 {readings.length
                   ? readings[readings.length - 1][key].toFixed(2)
                   : "—"}
@@ -140,12 +140,12 @@ export default function MonitoringHistoryPage() {
           ))}
         </div>
 
-        <section className="rounded-2xl border border-[#E1EADF] bg-white p-5 sm:p-7">
+        <section className="rounded-2xl border border-[#DCE6DB] bg-white p-5 sm:p-7">
           <div className="mb-5 flex items-center justify-between">
-            <h2 className="text-xl font-bold text-[#173D2B]">
+            <h2 className="text-xl font-bold text-[#003D2E]">
               Grafik {config.label}
             </h2>
-            <span className="rounded-full bg-[#EAF5EC] px-3 py-1 text-xs font-semibold text-[#28784A]">
+            <span className="rounded-full bg-[#E2F0E9] px-3 py-1 text-xs font-semibold text-[#08785C]">
               <Activity size={13} className="mr-1 inline" />
               Simulasi
             </span>
@@ -209,12 +209,12 @@ export default function MonitoringHistoryPage() {
           ].map(([label, value]) => (
             <div
               key={String(label)}
-              className="rounded-2xl border border-[#E1EADF] bg-white p-5"
+              className="rounded-2xl border border-[#DCE6DB] bg-white p-5"
             >
-              <p className="text-sm text-[#6A7B6E]">
+              <p className="text-sm text-[#62766D]">
                 {label}
               </p>
-              <p className="mt-2 text-2xl font-bold text-[#173D2B]">
+              <p className="mt-2 text-2xl font-bold text-[#003D2E]">
                 {Number(value).toFixed(2)} {config.unit}
               </p>
             </div>

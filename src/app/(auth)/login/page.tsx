@@ -71,23 +71,23 @@ function LoginContent() {
   }
 
   const fieldClass =
-    "h-13 w-full min-w-0 bg-transparent text-sm text-[#194D33] outline-none placeholder:text-[#9BA99D]";
+    "h-13 w-full min-w-0 bg-transparent text-sm text-[#005B45] outline-none placeholder:text-[#9BA99D]";
 
   const wrapperClass =
-    "flex items-center gap-3 rounded-2xl border border-[#DDE7D8] bg-[#F4F7ED] px-4 shadow-[inset_3px_3px_7px_rgba(25,77,51,0.07),inset_-2px_-2px_5px_white] transition focus-within:border-[#28784A] focus-within:ring-2 focus-within:ring-[#28784A]/10";
+    "flex items-center gap-3 rounded-2xl border border-[#DCE6DB] bg-[#F3F7F2] px-4 shadow-[inset_3px_3px_7px_rgba(25,77,51,0.07),inset_-2px_-2px_5px_white] transition focus-within:border-[#08785C] focus-within:ring-2 focus-within:ring-[#08785C]/10";
 
   return (
     <AuthShell mode="login">
       <div>
-        <span className="inline-flex rounded-full bg-[#FFDA57] px-4 py-2 text-xs font-extrabold tracking-wider text-[#194D33]">
+        <span className="inline-flex rounded-full bg-[#FF70AD] px-4 py-2 text-xs font-extrabold tracking-wider text-[#005B45]">
           SELAMAT DATANG
         </span>
 
-        <h1 className="mt-5 text-3xl font-extrabold tracking-tight text-[#194D33] sm:text-4xl">
+        <h1 className="mt-5 text-3xl font-extrabold tracking-tight text-[#005B45] sm:text-4xl">
           Selamat Datang Kembali
         </h1>
 
-        <p className="mt-3 text-sm leading-7 text-[#718573]">
+        <p className="mt-3 text-sm leading-7 text-[#62766D]">
           Masuk untuk melanjutkan perjalanan akuaponik cerdasmu.
         </p>
       </div>
@@ -104,7 +104,7 @@ function LoginContent() {
           <div className={wrapperClass}>
             <Mail
               size={19}
-              className="shrink-0 text-[#72917A]"
+              className="shrink-0 text-[#688D7B]"
             />
 
             <input
@@ -131,7 +131,7 @@ function LoginContent() {
           <div className={wrapperClass}>
             <LockKeyhole
               size={19}
-              className="shrink-0 text-[#72917A]"
+              className="shrink-0 text-[#688D7B]"
             />
 
             <input
@@ -155,7 +155,7 @@ function LoginContent() {
                   ? "Sembunyikan kata sandi"
                   : "Tampilkan kata sandi"
               }
-              className="shrink-0 text-[#809388] hover:text-[#194D33]"
+              className="shrink-0 text-[#688D7B] hover:text-[#005B45]"
             >
               {showPassword ? (
                 <EyeOff size={19} />
@@ -169,7 +169,7 @@ function LoginContent() {
         <div className="flex justify-end">
           <Link
             href="/forgot-password"
-            className="text-sm font-bold text-[#28784A] hover:underline"
+            className="text-sm font-bold text-[#08785C] hover:underline"
           >
             Lupa kata sandi?
           </Link>
@@ -195,19 +195,19 @@ function LoginContent() {
           type="submit"
           disabled={loading}
           whileTap={{ scale: 0.97 }}
-          className="flex h-14 w-full items-center justify-center gap-3 rounded-2xl bg-[#FFDA57] px-6 font-extrabold text-[#194D33] shadow-[5px_6px_0_rgba(135,105,23,0.16),inset_2px_2px_5px_rgba(255,255,255,0.55)] transition hover:bg-[#FFD43B] disabled:cursor-not-allowed disabled:opacity-60"
+          className="flex h-14 w-full items-center justify-center gap-3 rounded-2xl bg-[#FF70AD] px-6 font-extrabold text-[#005B45] shadow-[5px_6px_0_rgba(135,105,23,0.16),inset_2px_2px_5px_rgba(255,255,255,0.55)] transition hover:bg-[#FFD43B] disabled:cursor-not-allowed disabled:opacity-60"
         >
           {loading ? "Sedang Masuk..." : "Masuk"}
           {!loading && <ArrowRight size={19} />}
         </motion.button>
       </form>
 
-      <div className="mt-8 border-t border-[#E0E9DD] pt-6">
-        <p className="text-center text-sm text-[#718573]">
+      <div className="mt-8 border-t border-[#DCE6DB] pt-6">
+        <p className="text-center text-sm text-[#62766D]">
           Belum punya akun?{" "}
           <Link
             href="/register"
-            className="font-extrabold text-[#28784A] hover:underline"
+            className="font-extrabold text-[#08785C] hover:underline"
           >
             Daftar Sekarang
           </Link>

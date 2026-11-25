@@ -135,14 +135,14 @@ export default function OrderDetailPage() {
     <main className="mx-auto max-w-5xl space-y-7 px-4 py-8 sm:px-6">
       <Link
         href="/marketplace/orders"
-        className="inline-flex items-center gap-2 text-sm font-bold text-[#28784A]"
+        className="inline-flex items-center gap-2 text-sm font-bold text-[#08785C]"
       >
         <ArrowLeft size={17} />
         Kembali ke Pesanan Saya
       </Link>
 
       {loading ? (
-        <p className="py-12 text-center text-[#718573]">
+        <p className="py-12 text-center text-[#62766D]">
           Memuat detail pesanan...
         </p>
       ) : error || !order ? (
@@ -152,18 +152,18 @@ export default function OrderDetailPage() {
       ) : (
         <>
           <div>
-            <h1 className="text-2xl font-extrabold text-[#194D33] sm:text-3xl">
+            <h1 className="text-2xl font-extrabold text-[#005B45] sm:text-3xl">
               Detail Pesanan
             </h1>
-            <p className="mt-2 break-all text-sm text-[#718573]">
+            <p className="mt-2 break-all text-sm text-[#62766D]">
               {order.order_number}
             </p>
           </div>
 
           <div className="grid gap-6 lg:grid-cols-[1.4fr_1fr]">
             <div className="space-y-6">
-              <section className="rounded-3xl border border-[#E0E9DD] bg-white p-6">
-                <h2 className="mb-5 flex items-center gap-2 text-lg font-extrabold text-[#194D33]">
+              <section className="rounded-3xl border border-[#DCE6DB] bg-white p-6">
+                <h2 className="mb-5 flex items-center gap-2 text-lg font-extrabold text-[#005B45]">
                   <Package size={21} />
                   Produk Dipesan
                 </h2>
@@ -175,15 +175,15 @@ export default function OrderDetailPage() {
                       className="flex justify-between gap-4 border-b border-[#EDF1E9] pb-4 last:border-0 last:pb-0"
                     >
                       <div>
-                        <p className="font-bold text-[#194D33]">
+                        <p className="font-bold text-[#005B45]">
                           {item.product_name}
                         </p>
-                        <p className="mt-1 text-sm text-[#718573]">
+                        <p className="mt-1 text-sm text-[#62766D]">
                           {item.quantity} × {rupiah(item.unit_price)}
                         </p>
                       </div>
 
-                      <span className="font-bold text-[#194D33]">
+                      <span className="font-bold text-[#005B45]">
                         {rupiah(item.subtotal)}
                       </span>
                     </div>
@@ -191,8 +191,8 @@ export default function OrderDetailPage() {
                 </div>
               </section>
 
-              <section className="rounded-3xl border border-[#E0E9DD] bg-white p-6">
-                <h2 className="mb-5 flex items-center gap-2 text-lg font-extrabold text-[#194D33]">
+              <section className="rounded-3xl border border-[#DCE6DB] bg-white p-6">
+                <h2 className="mb-5 flex items-center gap-2 text-lg font-extrabold text-[#005B45]">
                   <MapPin size={21} />
                   Informasi Pengiriman
                 </h2>
@@ -200,17 +200,17 @@ export default function OrderDetailPage() {
                 <div className="flex items-start gap-3">
                   <UserRound
                     size={20}
-                    className="mt-1 shrink-0 text-[#28784A]"
+                    className="mt-1 shrink-0 text-[#08785C]"
                   />
 
                   <div className="space-y-2 text-sm">
-                    <p className="font-bold text-[#194D33]">
+                    <p className="font-bold text-[#005B45]">
                       {order.recipient_name}
                     </p>
-                    <p className="text-[#718573]">
+                    <p className="text-[#62766D]">
                       {order.recipient_phone}
                     </p>
-                    <p className="whitespace-pre-wrap text-[#718573]">
+                    <p className="whitespace-pre-wrap text-[#62766D]">
                       {order.shipping_address}
                     </p>
                   </div>
@@ -219,37 +219,37 @@ export default function OrderDetailPage() {
             </div>
 
             <div>
-              <section className="rounded-3xl border border-[#E0E9DD] bg-white p-6">
-                <h2 className="mb-5 text-lg font-extrabold text-[#194D33]">
+              <section className="rounded-3xl border border-[#DCE6DB] bg-white p-6">
+                <h2 className="mb-5 text-lg font-extrabold text-[#005B45]">
                   Ringkasan Pesanan
                 </h2>
 
                 <div className="space-y-4 text-sm">
                   <div className="flex justify-between gap-3">
-                    <span className="text-[#718573]">
+                    <span className="text-[#62766D]">
                       Pembayaran
                     </span>
-                    <span className="text-right font-bold text-[#194D33]">
+                    <span className="text-right font-bold text-[#005B45]">
                       {paymentLabels[order.payment_status] ||
                         order.payment_status}
                     </span>
                   </div>
 
                   <div className="flex justify-between gap-3">
-                    <span className="text-[#718573]">
+                    <span className="text-[#62766D]">
                       Status Pesanan
                     </span>
-                    <span className="text-right font-bold text-[#194D33]">
+                    <span className="text-right font-bold text-[#005B45]">
                       {orderLabels[order.order_status] ||
                         order.order_status}
                     </span>
                   </div>
 
                   <div className="flex justify-between gap-3 border-t border-[#EDF1E9] pt-4">
-                    <span className="font-bold text-[#718573]">
+                    <span className="font-bold text-[#62766D]">
                       Total
                     </span>
-                    <span className="text-xl font-extrabold text-[#194D33]">
+                    <span className="text-xl font-extrabold text-[#005B45]">
                       {rupiah(order.total_amount)}
                     </span>
                   </div>
@@ -261,7 +261,7 @@ export default function OrderDetailPage() {
                       href={order.snap_redirect_url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-6 flex h-12 items-center justify-center gap-2 rounded-2xl bg-[#FFDA57] font-extrabold text-[#194D33]"
+                      className="mt-6 flex h-12 items-center justify-center gap-2 rounded-2xl bg-[#FF70AD] font-extrabold text-[#005B45]"
                     >
                       <CreditCard size={18} />
                       Lanjutkan Pembayaran

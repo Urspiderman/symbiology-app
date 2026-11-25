@@ -274,18 +274,18 @@ export default function AIStudioInputPage() {
     <main className="mx-auto max-w-5xl space-y-7 px-4 py-8 sm:px-6">
       <Link
         href="/ai-studio"
-        className="inline-flex items-center gap-2 text-sm font-bold text-[#28784A]"
+        className="inline-flex items-center gap-2 text-sm font-bold text-[#08785C]"
       >
         <ArrowLeft size={17} />
         Kembali ke AI Studio
       </Link>
 
       <div>
-        <h1 className="text-3xl font-extrabold text-[#194D33]">
+        <h1 className="text-3xl font-extrabold text-[#005B45]">
           Rancang Akuaponik dengan AI
         </h1>
 
-        <p className="mt-2 text-sm leading-6 text-[#718573]">
+        <p className="mt-2 text-sm leading-6 text-[#62766D]">
           Upload foto ruangan, lengkapi kebutuhan,
           lalu lihat visualisasi akuaponik langsung
           pada ruanganmu.
@@ -304,8 +304,8 @@ export default function AIStudioInputPage() {
               key={item.number}
               className={`rounded-2xl p-3 text-center sm:p-4 ${
                 active || completed
-                  ? "bg-[#194D33] text-white"
-                  : "bg-[#EAF3E5] text-[#718573]"
+                  ? "bg-[#005B45] text-white"
+                  : "bg-[#E2F0E9] text-[#62766D]"
               }`}
             >
               <div className="mb-2 flex justify-center">
@@ -343,21 +343,21 @@ export default function AIStudioInputPage() {
 
       {/* STEP 3 */}
       {step === 3 && photoData && details && (
-        <section className="space-y-6 rounded-3xl border border-[#E0E9DD] bg-white p-5 shadow-sm sm:p-8">
-          <div className="inline-flex rounded-2xl bg-[#EAF3E5] p-3 text-[#194D33]">
+        <section className="space-y-6 rounded-3xl border border-[#DCE6DB] bg-white p-5 shadow-sm sm:p-8">
+          <div className="inline-flex rounded-2xl bg-[#E2F0E9] p-3 text-[#005B45]">
             <Sparkles size={26} />
           </div>
 
           <div>
-            <span className="text-xs font-extrabold text-[#28784A]">
+            <span className="text-xs font-extrabold text-[#08785C]">
               LANGKAH 3 — GENERATE FOTO AI
             </span>
 
-            <h2 className="mt-3 text-2xl font-extrabold text-[#194D33]">
+            <h2 className="mt-3 text-2xl font-extrabold text-[#005B45]">
               Siap Membuat Visualisasi Akuaponik
             </h2>
 
-            <p className="mt-2 text-sm leading-6 text-[#718573]">
+            <p className="mt-2 text-sm leading-6 text-[#62766D]">
               Gemini akan menggunakan foto ruangan
               asli dan informasi kebutuhanmu untuk
               membuat satu foto hasil desain.
@@ -365,33 +365,33 @@ export default function AIStudioInputPage() {
           </div>
 
           {/* RINGKASAN FOTO */}
-          <div className="rounded-2xl bg-[#F4F7ED] p-5">
-            <p className="text-xs font-bold text-[#718573]">
+          <div className="rounded-2xl bg-[#F3F7F2] p-5">
+            <p className="text-xs font-bold text-[#62766D]">
               Hasil Analisis Foto
             </p>
 
-            <p className="mt-2 font-extrabold text-[#194D33]">
+            <p className="mt-2 font-extrabold text-[#005B45]">
               {photoData.analysis.roomType}
             </p>
 
-            <p className="mt-2 text-sm leading-6 text-[#536B57]">
+            <p className="mt-2 text-sm leading-6 text-[#526A5E]">
               {photoData.analysis.description}
             </p>
           </div>
 
           {/* RINGKASAN KEBUTUHAN */}
           <div className="grid gap-4 sm:grid-cols-2">
-            <div className="rounded-2xl border border-[#E0E9DD] p-5">
+            <div className="rounded-2xl border border-[#DCE6DB] p-5">
               <Ruler
                 size={22}
-                className="text-[#28784A]"
+                className="text-[#08785C]"
               />
 
-              <p className="mt-3 text-xs text-[#718573]">
+              <p className="mt-3 text-xs text-[#62766D]">
                 Luas Area
               </p>
 
-              <p className="mt-1 text-xl font-extrabold text-[#194D33]">
+              <p className="mt-1 text-xl font-extrabold text-[#005B45]">
                 {(
                   details.length * details.width
                 ).toLocaleString("id-ID", {
@@ -401,17 +401,17 @@ export default function AIStudioInputPage() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-[#E0E9DD] p-5">
+            <div className="rounded-2xl border border-[#DCE6DB] p-5">
               <Wallet
                 size={22}
-                className="text-[#28784A]"
+                className="text-[#08785C]"
               />
 
-              <p className="mt-3 text-xs text-[#718573]">
+              <p className="mt-3 text-xs text-[#62766D]">
                 Anggaran
               </p>
 
-              <p className="mt-1 text-xl font-extrabold text-[#194D33]">
+              <p className="mt-1 text-xl font-extrabold text-[#005B45]">
                 Rp
                 {details.budget.toLocaleString(
                   "id-ID"
@@ -419,49 +419,49 @@ export default function AIStudioInputPage() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-[#E0E9DD] p-5">
+            <div className="rounded-2xl border border-[#DCE6DB] p-5">
               <Fish
                 size={22}
-                className="text-[#28784A]"
+                className="text-[#08785C]"
               />
 
-              <p className="mt-3 text-xs text-[#718573]">
+              <p className="mt-3 text-xs text-[#62766D]">
                 Preferensi Ikan
               </p>
 
-              <p className="mt-1 font-extrabold text-[#194D33]">
+              <p className="mt-1 font-extrabold text-[#005B45]">
                 {fishLabels[details.fish] ||
                   details.fish}
               </p>
             </div>
 
-            <div className="rounded-2xl border border-[#E0E9DD] p-5">
+            <div className="rounded-2xl border border-[#DCE6DB] p-5">
               <Leaf
                 size={22}
-                className="text-[#28784A]"
+                className="text-[#08785C]"
               />
 
-              <p className="mt-3 text-xs text-[#718573]">
+              <p className="mt-3 text-xs text-[#62766D]">
                 Pilihan Tanaman
               </p>
 
-              <p className="mt-1 font-extrabold text-[#194D33]">
+              <p className="mt-1 font-extrabold text-[#005B45]">
                 {details.plants.join(", ")}
               </p>
             </div>
           </div>
 
-          <div className="rounded-2xl border border-[#E0E9DD] p-5">
-            <p className="text-sm font-extrabold text-[#194D33]">
+          <div className="rounded-2xl border border-[#DCE6DB] p-5">
+            <p className="text-sm font-extrabold text-[#005B45]">
               Prioritas Desain
             </p>
 
-            <p className="mt-2 text-sm text-[#718573]">
+            <p className="mt-2 text-sm text-[#62766D]">
               {priorityLabels[details.priority]}
             </p>
 
             {details.notes && (
-              <p className="mt-3 text-sm leading-6 text-[#718573]">
+              <p className="mt-3 text-sm leading-6 text-[#62766D]">
                 {details.notes}
               </p>
             )}
@@ -471,22 +471,22 @@ export default function AIStudioInputPage() {
           {generating && (
             <div
               role="status"
-              className="rounded-2xl bg-[#EAF3E5] p-6 text-center"
+              className="rounded-2xl bg-[#E2F0E9] p-6 text-center"
             >
               <LoaderCircle
                 size={30}
-                className="mx-auto animate-spin text-[#194D33]"
+                className="mx-auto animate-spin text-[#005B45]"
               />
 
-              <p className="mt-4 font-extrabold text-[#194D33]">
+              <p className="mt-4 font-extrabold text-[#005B45]">
                 Sedang Membuat Desain
               </p>
 
-              <p className="mt-2 text-sm text-[#718573]">
+              <p className="mt-2 text-sm text-[#62766D]">
                 {generationStage}
               </p>
 
-              <p className="mt-2 text-xs text-[#718573]">
+              <p className="mt-2 text-xs text-[#62766D]">
                 Jangan tutup halaman selama
                 proses berlangsung.
               </p>
@@ -509,7 +509,7 @@ export default function AIStudioInputPage() {
               type="button"
               disabled={generating}
               onClick={() => goToStep(2)}
-              className="inline-flex items-center justify-center gap-2 rounded-2xl border border-[#DDE7D8] px-5 py-4 font-bold text-[#194D33] disabled:opacity-50"
+              className="inline-flex items-center justify-center gap-2 rounded-2xl border border-[#DCE6DB] px-5 py-4 font-bold text-[#005B45] disabled:opacity-50"
             >
               <ArrowLeft size={18} />
               Ubah Detail
@@ -519,7 +519,7 @@ export default function AIStudioInputPage() {
               type="button"
               disabled={generating}
               onClick={handleGenerate}
-              className="inline-flex flex-1 items-center justify-center gap-3 rounded-2xl bg-[#194D33] px-6 py-4 font-extrabold text-white transition hover:bg-[#246342] disabled:opacity-60"
+              className="inline-flex flex-1 items-center justify-center gap-3 rounded-2xl bg-[#005B45] px-6 py-4 font-extrabold text-white transition hover:bg-[#246342] disabled:opacity-60"
             >
               {generating ? (
                 <>
@@ -538,7 +538,7 @@ export default function AIStudioInputPage() {
             </button>
           </div>
 
-          <p className="text-xs leading-6 text-[#718573]">
+          <p className="text-xs leading-6 text-[#62766D]">
             Hasil foto adalah visualisasi konsep AI,
             bukan rancangan teknik yang telah
             diverifikasi. Pastikan kondisi struktur,

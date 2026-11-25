@@ -56,7 +56,7 @@ export default function ForgotPasswordPage() {
 
   return (
     <AuthShell mode="forgot">
-      <span className="inline-flex rounded-full bg-[#FFDA57] px-4 py-2 text-xs font-extrabold tracking-wider">
+      <span className="inline-flex rounded-full bg-[#FF70AD] px-4 py-2 text-xs font-extrabold tracking-wider">
         PEMULIHAN AKUN
       </span>
 
@@ -64,7 +64,7 @@ export default function ForgotPasswordPage() {
         Lupa Kata Sandi?
       </h1>
 
-      <p className="mt-3 text-sm leading-7 text-[#718573]">
+      <p className="mt-3 text-sm leading-7 text-[#62766D]">
         Masukkan alamat email yang terdaftar. Kami akan mengirim
         tautan untuk mengatur ulang kata sandi.
       </p>
@@ -81,7 +81,7 @@ export default function ForgotPasswordPage() {
 
           <Link
             href="/login"
-            className="flex h-14 items-center justify-center gap-2 rounded-2xl bg-[#FFDA57] font-extrabold"
+            className="flex h-14 items-center justify-center gap-2 rounded-2xl bg-[#FF70AD] font-extrabold"
           >
             Kembali ke Login <ArrowRight size={18} />
           </Link>
@@ -93,8 +93,8 @@ export default function ForgotPasswordPage() {
               Email
             </label>
 
-            <div className="flex items-center gap-3 rounded-2xl border border-[#DDE7D8] bg-[#F4F7ED] px-4 shadow-[inset_3px_3px_7px_rgba(25,77,51,0.07)] focus-within:border-[#28784A]">
-              <Mail size={19} className="text-[#72917A]" />
+            <div className="flex items-center gap-3 rounded-2xl border border-[#DCE6DB] bg-[#F3F7F2] px-4 shadow-[inset_3px_3px_7px_rgba(25,77,51,0.07)] focus-within:border-[#08785C]">
+              <Mail size={19} className="text-[#688D7B]" />
               <input
                 id="forgot-email"
                 type="email"
@@ -119,7 +119,7 @@ export default function ForgotPasswordPage() {
             type="submit"
             disabled={loading}
             whileTap={{ scale: 0.97 }}
-            className="flex h-14 w-full items-center justify-center gap-3 rounded-2xl bg-[#FFDA57] font-extrabold shadow-[5px_6px_0_rgba(135,105,23,0.16)] disabled:opacity-60"
+            className="flex h-14 w-full items-center justify-center gap-3 rounded-2xl bg-[#FF70AD] font-extrabold shadow-[5px_6px_0_rgba(135,105,23,0.16)] disabled:opacity-60"
           >
             {loading ? "Mengirim..." : "Kirim Tautan Pemulihan"}
             {!loading && <ArrowRight size={19} />}
@@ -129,7 +129,7 @@ export default function ForgotPasswordPage() {
 
       <Link
         href="/login"
-        className="mt-8 inline-flex items-center gap-2 text-sm font-bold text-[#28784A] hover:underline"
+        className="mt-8 inline-flex items-center gap-2 text-sm font-bold text-[#08785C] hover:underline"
       >
         <ArrowLeft size={17} />
         Kembali ke Login

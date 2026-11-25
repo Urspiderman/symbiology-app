@@ -26,12 +26,12 @@ export default function AuthShell({
   const isRegister = mode === "register";
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-[#EAF2E4] text-[#194D33]">
+    <main className="relative min-h-screen overflow-hidden bg-[#EAF2E4] text-[#005B45]">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 overflow-hidden"
       >
-        <div className="absolute -left-40 -top-40 h-[500px] w-[500px] rounded-full bg-[#FFDA57]/20 blur-3xl" />
+        <div className="absolute -left-40 -top-40 h-[500px] w-[500px] rounded-full bg-[#FF70AD]/20 blur-3xl" />
         <div className="absolute -bottom-40 -right-32 h-[450px] w-[450px] rounded-full bg-[#A8D5A4]/35 blur-3xl" />
       </div>
 
@@ -50,7 +50,7 @@ export default function AuthShell({
 
           <Link
             href="/onboarding"
-            className="inline-flex items-center gap-2 rounded-full border border-white bg-[#FFFBF1]/80 px-4 py-2.5 text-xs font-bold text-[#194D33] transition hover:bg-[#FFDA57] sm:text-sm"
+            className="inline-flex items-center gap-2 rounded-full border border-white bg-[#FFFAE7]/80 px-4 py-2.5 text-xs font-bold text-[#005B45] transition hover:bg-[#FF70AD] sm:text-sm"
           >
             <ArrowLeft size={16} />
             Kembali
@@ -58,12 +58,12 @@ export default function AuthShell({
         </header>
 
         <div className="flex flex-1 items-center py-6 lg:py-8">
-          <div className="grid w-full overflow-hidden rounded-[34px] border border-white/80 bg-[#FFFBF1] shadow-[12px_16px_40px_rgba(25,77,51,0.12),inset_2px_2px_5px_white] lg:grid-cols-[0.95fr_1.05fr]">
+          <div className="grid w-full overflow-hidden rounded-[34px] border border-white/80 bg-[#FFFAE7] shadow-[12px_16px_40px_rgba(25,77,51,0.12),inset_2px_2px_5px_white] lg:grid-cols-[0.95fr_1.05fr]">
             {/* Left illustration */}
-            <div className="relative hidden min-h-[650px] overflow-hidden bg-[#194D33] p-10 text-white lg:flex lg:flex-col xl:p-12">
-              <div className="absolute -right-24 -top-24 h-64 w-64 rounded-full border-[45px] border-[#FFDA57]/10" />
+            <div className="relative hidden min-h-[650px] overflow-hidden bg-[#005B45] p-10 text-white lg:flex lg:flex-col xl:p-12">
+              <div className="absolute -right-24 -top-24 h-64 w-64 rounded-full border-[45px] border-[#FF70AD]/10" />
               <div className="absolute -bottom-28 -left-28 h-72 w-72 rounded-full border-[45px] border-white/10" />
-              <div className="absolute left-1/2 top-1/2 h-[360px] w-[360px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#FFDA57]/15 blur-3xl" />
+              <div className="absolute left-1/2 top-1/2 h-[360px] w-[360px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#FF70AD]/15 blur-3xl" />
 
               <motion.div
                 initial={
@@ -75,7 +75,7 @@ export default function AuthShell({
                 transition={{ duration: 0.5 }}
                 className="relative z-10"
               >
-                <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-extrabold tracking-wider text-[#FFDA57]">
+                <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-extrabold tracking-wider text-[#FF70AD]">
                   <Leaf size={15} />
                   GROW UR FUTURE
                 </span>
@@ -114,13 +114,13 @@ export default function AuthShell({
               </motion.div>
 
               <div className="relative z-10 flex flex-wrap gap-3">
-                <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-xs font-semibold text-[#E7F3E4]">
-                  <Sparkles size={15} className="text-[#FFDA57]" />
+                <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-xs font-semibold text-[#E2F0E9]">
+                  <Sparkles size={15} className="text-[#FF70AD]" />
                   AI-Powered
                 </span>
 
-                <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-xs font-semibold text-[#E7F3E4]">
-                  <ShieldCheck size={15} className="text-[#FFDA57]" />
+                <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-xs font-semibold text-[#E2F0E9]">
+                  <ShieldCheck size={15} className="text-[#FF70AD]" />
                   Smart Aquaponics
                 </span>
               </div>
@@ -144,7 +144,7 @@ export default function AuthShell({
           </div>
         </div>
 
-        <footer className="text-center text-xs font-medium text-[#718573]">
+        <footer className="text-center text-xs font-medium text-[#62766D]">
           SYMBIOLOGY • Grow UR Future
         </footer>
       </div>

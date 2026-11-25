@@ -225,26 +225,26 @@ export default function ProfilePage() {
 
   if (loading) {
     return (
-      <main className="flex min-h-[70vh] items-center justify-center bg-[#FFFBF1]">
+      <main className="flex min-h-[70vh] items-center justify-center bg-[#FFFAE7]">
         <Loader2
           size={30}
-          className="animate-spin text-[#28784A]"
+          className="animate-spin text-[#08785C]"
         />
       </main>
     );
   }
 
   return (
-    <main className="min-h-screen bg-[#FFFBF1] px-4 py-7 text-[#173D2B] sm:px-6 lg:px-10">
+    <main className="min-h-screen bg-[#FFFAE7] px-4 py-7 text-[#003D2E] sm:px-6 lg:px-10">
       <div className="mx-auto max-w-5xl space-y-6">
         <div>
-          <p className="text-sm font-semibold text-[#28784A]">
+          <p className="text-sm font-semibold text-[#08785C]">
             SYMBIOLOGY / Akun
           </p>
           <h1 className="mt-1 text-3xl font-bold">
             Profil Saya
           </h1>
-          <p className="mt-2 text-sm text-[#6A7B6E]">
+          <p className="mt-2 text-sm text-[#62766D]">
             Kelola informasi pribadi dan akun SYMBIOLOGY kamu.
           </p>
         </div>
@@ -268,12 +268,12 @@ export default function ProfilePage() {
           </div>
         )}
 
-        <section className="overflow-hidden rounded-2xl border border-[#E1EADF] bg-white shadow-sm">
-          <div className="h-28 bg-gradient-to-r from-[#174D32] via-[#28784A] to-[#77A86D]" />
+        <section className="overflow-hidden rounded-2xl border border-[#DCE6DB] bg-white shadow-sm">
+          <div className="h-28 bg-gradient-to-r from-[#174D32] via-[#08785C] to-[#77A86D]" />
 
           <div className="px-5 pb-6 sm:px-7">
             <div className="-mt-10 flex flex-wrap items-end justify-between gap-4">
-              <div className="flex h-20 w-20 items-center justify-center rounded-2xl border-4 border-white bg-[#FFDA57] text-2xl font-bold text-[#174D32] shadow-sm">
+              <div className="flex h-20 w-20 items-center justify-center rounded-2xl border-4 border-white bg-[#FF70AD] text-2xl font-bold text-[#174D32] shadow-sm">
                 {getInitials(profile.fullName)}
               </div>
 
@@ -284,7 +284,7 @@ export default function ProfilePage() {
                     setMessage("");
                     setEditing(true);
                   }}
-                  className="inline-flex items-center gap-2 rounded-xl bg-[#28784A] px-4 py-2.5 text-sm font-semibold text-white hover:bg-[#1E603A]"
+                  className="inline-flex items-center gap-2 rounded-xl bg-[#08785C] px-4 py-2.5 text-sm font-semibold text-white hover:bg-[#1E603A]"
                 >
                   <Pencil size={16} />
                   Edit Profil
@@ -297,11 +297,11 @@ export default function ProfilePage() {
                 {profile.fullName}
               </h2>
 
-              <p className="mt-1 text-sm text-[#6A7B6E]">
+              <p className="mt-1 text-sm text-[#62766D]">
                 {profile.email}
               </p>
 
-              <span className="mt-3 inline-flex items-center gap-2 rounded-full bg-[#EAF5EC] px-3 py-1.5 text-xs font-semibold text-[#28784A]">
+              <span className="mt-3 inline-flex items-center gap-2 rounded-full bg-[#E2F0E9] px-3 py-1.5 text-xs font-semibold text-[#08785C]">
                 <ShieldCheck size={15} />
                 Akun Terdaftar
               </span>
@@ -310,11 +310,11 @@ export default function ProfilePage() {
         </section>
 
         <div className="grid gap-4 sm:grid-cols-2">
-          <div className="rounded-2xl border border-[#E1EADF] bg-white p-5">
-            <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-[#EAF5EC] text-[#28784A]">
+          <div className="rounded-2xl border border-[#DCE6DB] bg-white p-5">
+            <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-[#E2F0E9] text-[#08785C]">
               <Leaf size={22} />
             </div>
-            <p className="text-sm text-[#6A7B6E]">
+            <p className="text-sm text-[#62766D]">
               Total Sistem Akuaponik
             </p>
             <p className="mt-1 text-3xl font-bold">
@@ -322,11 +322,11 @@ export default function ProfilePage() {
             </p>
           </div>
 
-          <div className="rounded-2xl border border-[#E1EADF] bg-white p-5">
+          <div className="rounded-2xl border border-[#DCE6DB] bg-white p-5">
             <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-[#FFF3C4] text-[#9C7610]">
               <Droplets size={22} />
             </div>
-            <p className="text-sm text-[#6A7B6E]">
+            <p className="text-sm text-[#62766D]">
               Sistem Berstatus Aktif
             </p>
             <p className="mt-1 text-3xl font-bold">
@@ -335,11 +335,11 @@ export default function ProfilePage() {
           </div>
         </div>
 
-        <section className="rounded-2xl border border-[#E1EADF] bg-white p-5 sm:p-7">
+        <section className="rounded-2xl border border-[#DCE6DB] bg-white p-5 sm:p-7">
           <div className="mb-6 flex items-center gap-3">
             <CircleUserRound
               size={22}
-              className="text-[#28784A]"
+              className="text-[#08785C]"
             />
             <h2 className="text-lg font-bold">
               Informasi Pribadi
@@ -366,7 +366,7 @@ export default function ProfilePage() {
                   }
                   maxLength={100}
                   required
-                  className="w-full rounded-xl border border-[#DCE8DE] px-4 py-3 text-sm outline-none focus:border-[#28784A]"
+                  className="w-full rounded-xl border border-[#DCE8DE] px-4 py-3 text-sm outline-none focus:border-[#08785C]"
                 />
               </div>
 
@@ -388,7 +388,7 @@ export default function ProfilePage() {
                     }))
                   }
                   placeholder="Contoh: 081234567890"
-                  className="w-full rounded-xl border border-[#DCE8DE] px-4 py-3 text-sm outline-none focus:border-[#28784A]"
+                  className="w-full rounded-xl border border-[#DCE8DE] px-4 py-3 text-sm outline-none focus:border-[#08785C]"
                 />
               </div>
 
@@ -396,7 +396,7 @@ export default function ProfilePage() {
                 <button
                   type="submit"
                   disabled={saving}
-                  className="inline-flex items-center gap-2 rounded-xl bg-[#28784A] px-5 py-3 text-sm font-semibold text-white disabled:opacity-60"
+                  className="inline-flex items-center gap-2 rounded-xl bg-[#08785C] px-5 py-3 text-sm font-semibold text-white disabled:opacity-60"
                 >
                   {saving ? (
                     <Loader2 size={17} className="animate-spin" />
@@ -466,11 +466,11 @@ export default function ProfilePage() {
           )}
         </section>
 
-        <section className="rounded-2xl border border-[#E1EADF] bg-white p-5 sm:p-7">
+        <section className="rounded-2xl border border-[#DCE6DB] bg-white p-5 sm:p-7">
           <h2 className="text-lg font-bold">
             Sistem Akuaponikku
           </h2>
-          <p className="mt-2 text-sm text-[#6A7B6E]">
+          <p className="mt-2 text-sm text-[#62766D]">
             Kelola instalasi akuaponik dan pantau kondisi air
             melalui dashboard monitoring.
           </p>
@@ -478,7 +478,7 @@ export default function ProfilePage() {
           <button
             type="button"
             onClick={() => router.push("/akuaponikku")}
-            className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#28784A]"
+            className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#08785C]"
           >
             Buka Akuaponikku
             <ArrowRight size={17} />
@@ -491,7 +491,7 @@ export default function ProfilePage() {
               <h2 className="text-lg font-bold">
                 Keluar dari Akun
               </h2>
-              <p className="mt-1 text-sm text-[#6A7B6E]">
+              <p className="mt-1 text-sm text-[#62766D]">
                 Akhiri sesi login pada perangkat ini.
               </p>
             </div>
@@ -523,7 +523,7 @@ export default function ProfilePage() {
               Keluar dari SYMBIOLOGY?
             </h2>
 
-            <p className="mt-3 text-sm leading-6 text-[#6A7B6E]">
+            <p className="mt-3 text-sm leading-6 text-[#62766D]">
               Kamu perlu login kembali untuk mengakses
               dashboard dan sistem akuaponik.
             </p>

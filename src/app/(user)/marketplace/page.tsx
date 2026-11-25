@@ -92,7 +92,7 @@ export default function MarketplacePage() {
   }, [products, search, category]);
 
   return (
-    <main className="min-h-screen bg-[#FFFBF1] pb-24 text-[#194D33]">
+    <main className="min-h-screen bg-[#FFFAE7] pb-24 text-[#005B45]">
       <div className="mx-auto max-w-[1440px] space-y-7 px-4 py-6 sm:px-6 lg:px-10 lg:py-9">
 
         {/* HEADER */}
@@ -107,14 +107,14 @@ export default function MarketplacePage() {
               Marketplace
             </h1>
 
-            <p className="mt-1 text-sm text-[#718573]">
+            <p className="mt-1 text-sm text-[#62766D]">
               Semua kebutuhan akuaponikmu dalam satu tempat.
             </p>
           </div>
 
           <Link
             href="/marketplace/orders"
-            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#E7F3E4] transition hover:bg-[#D8EBD3]"
+            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#E2F0E9] transition hover:bg-[#D8EBD3]"
             title="Pesanan Saya"
           >
             <ShoppingBag size={21} />
@@ -122,12 +122,12 @@ export default function MarketplacePage() {
         </div>
 
         {/* BANNER */}
-        <section className="relative overflow-hidden rounded-[28px] bg-[#194D33] px-5 py-7 text-white sm:px-8 sm:py-9 lg:px-10">
-          <div className="pointer-events-none absolute -right-16 -top-20 h-60 w-60 rounded-full border-[38px] border-[#FFDA57]/15" />
+        <section className="relative overflow-hidden rounded-[28px] bg-[#005B45] px-5 py-7 text-white sm:px-8 sm:py-9 lg:px-10">
+          <div className="pointer-events-none absolute -right-16 -top-20 h-60 w-60 rounded-full border-[38px] border-[#FF70AD]/15" />
           <div className="pointer-events-none absolute -bottom-20 right-20 h-48 w-48 rounded-full bg-[#A8D5A4]/10 blur-2xl" />
 
           <div className="relative z-10 max-w-xl">
-            <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1.5 text-xs font-bold text-[#FFDA57]">
+            <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1.5 text-xs font-bold text-[#FF70AD]">
               <Leaf size={14} />
               GROW UR FUTURE
             </span>
@@ -158,11 +158,11 @@ export default function MarketplacePage() {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Cari produk akuaponik..."
-              className="w-full min-w-0 bg-transparent text-sm text-[#194D33] outline-none placeholder:text-[#9AAB9D]"
+              className="w-full min-w-0 bg-transparent text-sm text-[#005B45] outline-none placeholder:text-[#9AAB9D]"
             />
           </div>
 
-          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#E7F3E4]">
+          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#E2F0E9]">
             <SlidersHorizontal size={20} />
           </div>
         </div>
@@ -178,8 +178,8 @@ export default function MarketplacePage() {
                 onClick={() => setCategory(item)}
                 className={`shrink-0 rounded-full px-4 py-2.5 text-xs font-bold capitalize transition sm:text-sm ${
                   selected
-                    ? "bg-[#194D33] text-white"
-                    : "bg-[#E7F3E4] text-[#194D33] hover:bg-[#D8EBD3]"
+                    ? "bg-[#005B45] text-white"
+                    : "bg-[#E2F0E9] text-[#005B45] hover:bg-[#D8EBD3]"
                 }`}
               >
                 {item}
@@ -195,7 +195,7 @@ export default function MarketplacePage() {
               Jelajahi Produk
             </h3>
 
-            <p className="mt-1 text-xs text-[#718573]">
+            <p className="mt-1 text-xs text-[#62766D]">
               {loading
                 ? "Memuat katalog..."
                 : `${filteredProducts.length} produk ditemukan`}
@@ -220,11 +220,11 @@ export default function MarketplacePage() {
                 key={index}
                 className="animate-pulse overflow-hidden rounded-2xl bg-white"
               >
-                <div className="aspect-square bg-[#E7F3E4]" />
+                <div className="aspect-square bg-[#E2F0E9]" />
                 <div className="space-y-3 p-3">
-                  <div className="h-3 rounded bg-[#E7F3E4]" />
-                  <div className="h-3 w-2/3 rounded bg-[#E7F3E4]" />
-                  <div className="h-8 rounded bg-[#E7F3E4]" />
+                  <div className="h-3 rounded bg-[#E2F0E9]" />
+                  <div className="h-3 w-2/3 rounded bg-[#E2F0E9]" />
+                  <div className="h-8 rounded bg-[#E2F0E9]" />
                 </div>
               </div>
             ))}
@@ -260,8 +260,8 @@ export default function MarketplacePage() {
                     )}
 
                     {soldOut && (
-                      <div className="absolute inset-0 flex items-center justify-center bg-[#194D33]/60">
-                        <span className="rounded-full bg-white px-3 py-1.5 text-xs font-bold text-[#194D33]">
+                      <div className="absolute inset-0 flex items-center justify-center bg-[#005B45]/60">
+                        <span className="rounded-full bg-white px-3 py-1.5 text-xs font-bold text-[#005B45]">
                           Stok Habis
                         </span>
                       </div>
@@ -274,13 +274,13 @@ export default function MarketplacePage() {
                       {product.category}
                     </span>
 
-                    <h4 className="min-h-[38px] overflow-hidden text-ellipsis text-xs font-bold leading-[19px] text-[#194D33] sm:text-sm">
+                    <h4 className="min-h-[38px] overflow-hidden text-ellipsis text-xs font-bold leading-[19px] text-[#005B45] sm:text-sm">
                       <span className="line-clamp-2">
                         {product.name}
                       </span>
                     </h4>
 
-                    <p className="mt-2 text-base font-extrabold text-[#194D33] sm:text-lg">
+                    <p className="mt-2 text-base font-extrabold text-[#005B45] sm:text-lg">
                       {rupiah(product.price)}
                     </p>
 
@@ -299,7 +299,7 @@ export default function MarketplacePage() {
                       ) : (
                         <Link
                           href={`/marketplace/checkout?product=${product.id}`}
-                          className="flex w-full items-center justify-center gap-1 rounded-xl bg-[#FFDA57] px-2 py-2.5 text-xs font-extrabold text-[#194D33] transition hover:bg-[#F5CA36]"
+                          className="flex w-full items-center justify-center gap-1 rounded-xl bg-[#FF70AD] px-2 py-2.5 text-xs font-extrabold text-[#005B45] transition hover:bg-[#F5CA36]"
                         >
                           Beli Sekarang
                           <ArrowRight size={14} />
@@ -322,7 +322,7 @@ export default function MarketplacePage() {
               Produk tidak ditemukan
             </h3>
 
-            <p className="mt-2 text-sm text-[#718573]">
+            <p className="mt-2 text-sm text-[#62766D]">
               Coba gunakan kata kunci atau kategori lain.
             </p>
           </div>

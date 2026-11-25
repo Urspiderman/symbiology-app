@@ -38,7 +38,7 @@ const metrics = {
     unit: "°C",
     min: 24,
     max: 32,
-    color: "#28784A",
+    color: "#08785C",
   },
   ph: {
     title: "pH Air",
@@ -89,8 +89,8 @@ function Chart({
     .join(" ");
 
   return (
-    <div className="rounded-2xl border border-[#E1EADF] bg-white p-5">
-      <h3 className="font-bold text-[#173D2B]">
+    <div className="rounded-2xl border border-[#DCE6DB] bg-white p-5">
+      <h3 className="font-bold text-[#003D2E]">
         {config.title}
       </h3>
 
@@ -230,7 +230,7 @@ export default function AkuaponikMonitoringPage() {
 
   if (loading || !state) {
     return (
-      <div className="flex min-h-[60vh] items-center justify-center text-[#28784A]">
+      <div className="flex min-h-[60vh] items-center justify-center text-[#08785C]">
         Memuat monitoring...
       </div>
     );
@@ -242,7 +242,7 @@ export default function AkuaponikMonitoringPage() {
         <p className="text-red-600">
           {error || "Sistem tidak ditemukan."}
         </p>
-        <Link href="/akuaponikku" className="text-[#28784A] underline">
+        <Link href="/akuaponikku" className="text-[#08785C] underline">
           Kembali
         </Link>
       </main>
@@ -250,11 +250,11 @@ export default function AkuaponikMonitoringPage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#FFFBF1] px-4 py-7 sm:px-6 lg:px-10">
+    <main className="min-h-screen bg-[#FFFAE7] px-4 py-7 sm:px-6 lg:px-10">
       <div className="mx-auto max-w-6xl space-y-6">
         <Link
           href="/akuaponikku"
-          className="inline-flex items-center gap-2 text-sm font-semibold text-[#28784A]"
+          className="inline-flex items-center gap-2 text-sm font-semibold text-[#08785C]"
         >
           <ArrowLeft size={17} />
           Kembali ke Akuaponikku
@@ -262,18 +262,18 @@ export default function AkuaponikMonitoringPage() {
 
         <div className="flex flex-wrap items-start justify-between gap-4">
           <div>
-            <p className="text-sm font-semibold text-[#28784A]">
+            <p className="text-sm font-semibold text-[#08785C]">
               SYMBIOLOGY / Monitoring
             </p>
-            <h1 className="mt-1 text-3xl font-bold text-[#173D2B]">
+            <h1 className="mt-1 text-3xl font-bold text-[#003D2E]">
               {system.name}
             </h1>
-            <p className="mt-2 text-sm text-[#6A7B6E]">
+            <p className="mt-2 text-sm text-[#62766D]">
               {system.location || "Lokasi belum diisi"}
             </p>
           </div>
 
-          <span className="rounded-full bg-[#EAF5EC] px-4 py-2 text-sm font-semibold text-[#28784A]">
+          <span className="rounded-full bg-[#E2F0E9] px-4 py-2 text-sm font-semibold text-[#08785C]">
             <Activity size={16} className="mr-2 inline" />
             Mode Demo
           </span>
@@ -303,16 +303,16 @@ export default function AkuaponikMonitoringPage() {
           ).map(({ key, icon: Icon }) => (
             <div
               key={key}
-              className="rounded-2xl border border-[#E1EADF] bg-white p-5"
+              className="rounded-2xl border border-[#DCE6DB] bg-white p-5"
             >
               <div className="flex items-center justify-between">
-                <p className="text-sm text-[#6A7B6E]">
+                <p className="text-sm text-[#62766D]">
                   {metrics[key].title}
                 </p>
-                <Icon size={22} className="text-[#28784A]" />
+                <Icon size={22} className="text-[#08785C]" />
               </div>
 
-              <p className="mt-5 text-3xl font-bold text-[#173D2B]">
+              <p className="mt-5 text-3xl font-bold text-[#003D2E]">
                 {latest?.[key].toFixed(key === "ph" ? 2 : 1) ?? "—"}
                 <span className="ml-1 text-sm font-normal">
                   {metrics[key].unit}
@@ -333,16 +333,16 @@ export default function AkuaponikMonitoringPage() {
         </div>
 
         <div className="grid gap-5 lg:grid-cols-2">
-          <section className="rounded-2xl border border-[#E1EADF] bg-white p-5">
-            <h2 className="mb-5 text-lg font-bold text-[#173D2B]">
+          <section className="rounded-2xl border border-[#DCE6DB] bg-white p-5">
+            <h2 className="mb-5 text-lg font-bold text-[#003D2E]">
               Kontrol Perangkat
             </h2>
 
             <div className="flex items-center justify-between rounded-xl bg-[#F7FAF6] p-4">
               <div className="flex items-center gap-3">
-                <Power className="text-[#28784A]" size={24} />
+                <Power className="text-[#08785C]" size={24} />
                 <div>
-                  <p className="font-semibold text-[#173D2B]">
+                  <p className="font-semibold text-[#003D2E]">
                     Pompa Sirkulasi
                   </p>
                   <p className="text-xs text-[#819085]">
@@ -361,7 +361,7 @@ export default function AkuaponikMonitoringPage() {
                   }))
                 }
                 className={`rounded-xl px-5 py-2 text-sm font-bold text-white disabled:cursor-not-allowed disabled:opacity-50 ${
-                  state.pumpOn ? "bg-[#28784A]" : "bg-[#A04E46]"
+                  state.pumpOn ? "bg-[#08785C]" : "bg-[#A04E46]"
                 }`}
               >
                 {state.pumpOn ? "ON" : "OFF"}
@@ -370,7 +370,7 @@ export default function AkuaponikMonitoringPage() {
 
             <div className="mt-4 flex items-center justify-between rounded-xl border border-[#E7EEE5] p-4">
               <div>
-                <p className="font-semibold text-[#173D2B]">
+                <p className="font-semibold text-[#003D2E]">
                   Mode Otomatis
                 </p>
                 <p className="text-xs text-[#819085]">
@@ -389,15 +389,15 @@ export default function AkuaponikMonitoringPage() {
                       : previous.pumpOn,
                   }))
                 }
-                className="rounded-full bg-[#EAF5EC] px-4 py-2 text-xs font-bold text-[#28784A]"
+                className="rounded-full bg-[#E2F0E9] px-4 py-2 text-xs font-bold text-[#08785C]"
               >
                 {state.autoMode ? "AUTO ON" : "MANUAL"}
               </button>
             </div>
           </section>
 
-          <section className="rounded-2xl border border-[#E1EADF] bg-white p-5">
-            <h2 className="mb-5 text-lg font-bold text-[#173D2B]">
+          <section className="rounded-2xl border border-[#DCE6DB] bg-white p-5">
+            <h2 className="mb-5 text-lg font-bold text-[#003D2E]">
               Status & Peringatan
             </h2>
 
@@ -414,7 +414,7 @@ export default function AkuaponikMonitoringPage() {
                 ))}
               </div>
             ) : (
-              <div className="flex items-start gap-3 rounded-xl bg-[#EAF5EC] p-4 text-[#28784A]">
+              <div className="flex items-start gap-3 rounded-xl bg-[#E2F0E9] p-4 text-[#08785C]">
                 <CheckCircle2 size={21} />
                 <div>
                   <p className="font-semibold">Simulasi Normal</p>
@@ -427,16 +427,16 @@ export default function AkuaponikMonitoringPage() {
           </section>
         </div>
 
-        <section className="rounded-2xl border border-[#E1EADF] bg-white p-5">
-          <h2 className="mb-4 text-lg font-bold text-[#173D2B]">
+        <section className="rounded-2xl border border-[#DCE6DB] bg-white p-5">
+          <h2 className="mb-4 text-lg font-bold text-[#003D2E]">
             Informasi Instalasi
           </h2>
 
           <div className="grid gap-4 sm:grid-cols-3">
             <div>
-              <Droplets size={18} className="text-[#28784A]" />
+              <Droplets size={18} className="text-[#08785C]" />
               <p className="mt-2 text-xs text-[#819085]">Tangki</p>
-              <p className="font-semibold text-[#173D2B]">
+              <p className="font-semibold text-[#003D2E]">
                 {system.tank_capacity_liters
                   ? `${system.tank_capacity_liters} Liter`
                   : "Belum diisi"}
@@ -444,17 +444,17 @@ export default function AkuaponikMonitoringPage() {
             </div>
 
             <div>
-              <Fish size={18} className="text-[#28784A]" />
+              <Fish size={18} className="text-[#08785C]" />
               <p className="mt-2 text-xs text-[#819085]">Ikan</p>
-              <p className="font-semibold text-[#173D2B]">
+              <p className="font-semibold text-[#003D2E]">
                 {system.fish_type || "Belum diisi"}
               </p>
             </div>
 
             <div>
-              <Leaf size={18} className="text-[#28784A]" />
+              <Leaf size={18} className="text-[#08785C]" />
               <p className="mt-2 text-xs text-[#819085]">Tanaman</p>
-              <p className="font-semibold text-[#173D2B]">
+              <p className="font-semibold text-[#003D2E]">
                 {system.plant_type || "Belum diisi"}
               </p>
             </div>
@@ -464,14 +464,14 @@ export default function AkuaponikMonitoringPage() {
         <div className="flex flex-wrap gap-3">
           <Link
             href={`/akuaponikku/history?systemId=${systemId}`}
-            className="rounded-xl border border-[#DCE8DE] bg-white px-5 py-3 text-sm font-semibold text-[#28784A]"
+            className="rounded-xl border border-[#DCE8DE] bg-white px-5 py-3 text-sm font-semibold text-[#08785C]"
           >
             Lihat Riwayat Monitoring
           </Link>
 
           <Link
             href={`/akuaponikku/connect?systemId=${systemId}`}
-            className="inline-flex items-center gap-2 rounded-xl bg-[#28784A] px-5 py-3 text-sm font-semibold text-white"
+            className="inline-flex items-center gap-2 rounded-xl bg-[#08785C] px-5 py-3 text-sm font-semibold text-white"
           >
             <Cpu size={17} />
             Hubungkan ESP32

@@ -45,7 +45,7 @@ const emptyForm: SystemForm = {
 };
 
 const inputClass =
-  "w-full rounded-xl border border-[#DCE8DE] bg-white px-4 py-3 text-sm text-[#173D2B] outline-none transition focus:border-[#28784A] focus:ring-2 focus:ring-[#28784A]/10";
+  "w-full rounded-xl border border-[#DCE8DE] bg-white px-4 py-3 text-sm text-[#003D2E] outline-none transition focus:border-[#08785C] focus:ring-2 focus:ring-[#08785C]/10";
 
 function statusLabel(status: AquaponicsSystem["status"]) {
   if (status === "active") return "Aktif";
@@ -169,17 +169,17 @@ export default function AkuaponikkuPage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#FFFBF1] px-4 py-7 text-[#173D2B] sm:px-6 lg:px-10">
+    <main className="min-h-screen bg-[#FFFAE7] px-4 py-7 text-[#003D2E] sm:px-6 lg:px-10">
       <div className="mx-auto max-w-6xl space-y-7">
         <div className="flex flex-wrap items-start justify-between gap-4">
           <div>
-            <p className="mb-1 text-sm font-semibold text-[#28784A]">
+            <p className="mb-1 text-sm font-semibold text-[#08785C]">
               SYMBIOLOGY / Akuaponikku
             </p>
             <h1 className="text-3xl font-bold tracking-tight">
               Akuaponikku
             </h1>
-            <p className="mt-2 text-sm text-[#6A7B6E]">
+            <p className="mt-2 text-sm text-[#62766D]">
               Kelola dan pantau seluruh sistem akuaponikmu.
             </p>
           </div>
@@ -190,7 +190,7 @@ export default function AkuaponikkuPage() {
               setFormError("");
               setShowModal(true);
             }}
-            className="inline-flex items-center gap-2 rounded-xl bg-[#28784A] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#1E603A]"
+            className="inline-flex items-center gap-2 rounded-xl bg-[#08785C] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#1E603A]"
           >
             <Plus size={18} />
             Tambah Sistem
@@ -199,10 +199,10 @@ export default function AkuaponikkuPage() {
 
         <div className="grid gap-4 sm:grid-cols-2">
           <div className="rounded-2xl border border-[#E2E9DF] bg-white p-5">
-            <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-[#EAF5EC] text-[#28784A]">
+            <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-[#E2F0E9] text-[#08785C]">
               <Leaf size={22} />
             </div>
-            <p className="text-sm text-[#6A7B6E]">Total Sistem</p>
+            <p className="text-sm text-[#62766D]">Total Sistem</p>
             <p className="mt-1 text-3xl font-bold">
               {loading ? "—" : systems.length}
             </p>
@@ -212,7 +212,7 @@ export default function AkuaponikkuPage() {
             <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-[#FFF3C4] text-[#9C7610]">
               <Droplets size={22} />
             </div>
-            <p className="text-sm text-[#6A7B6E]">
+            <p className="text-sm text-[#62766D]">
               Sistem Berstatus Aktif
             </p>
             <p className="mt-1 text-3xl font-bold">
@@ -232,7 +232,7 @@ export default function AkuaponikkuPage() {
             type="button"
             onClick={() => void loadSystems()}
             disabled={loading}
-            className="inline-flex items-center gap-2 text-sm font-medium text-[#28784A] disabled:opacity-50"
+            className="inline-flex items-center gap-2 text-sm font-medium text-[#08785C] disabled:opacity-50"
           >
             <RefreshCw size={16} className={loading ? "animate-spin" : ""} />
             Refresh
@@ -247,22 +247,22 @@ export default function AkuaponikkuPage() {
 
         {loading ? (
           <div className="flex min-h-48 items-center justify-center">
-            <Loader2 className="animate-spin text-[#28784A]" size={30} />
+            <Loader2 className="animate-spin text-[#08785C]" size={30} />
           </div>
         ) : systems.length === 0 ? (
           <div className="rounded-2xl border border-dashed border-[#D4E2D6] bg-white px-6 py-14 text-center">
-            <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-[#EAF5EC] text-[#28784A]">
+            <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-[#E2F0E9] text-[#08785C]">
               <Leaf size={30} />
             </div>
             <h3 className="text-lg font-bold">Belum Ada Sistem Akuaponik</h3>
-            <p className="mx-auto mt-2 max-w-md text-sm leading-6 text-[#6A7B6E]">
+            <p className="mx-auto mt-2 max-w-md text-sm leading-6 text-[#62766D]">
               Tambahkan sistem akuaponik pertamamu untuk mulai mengelola
               perangkat dan memantau kondisi air.
             </p>
             <button
               type="button"
               onClick={() => setShowModal(true)}
-              className="mt-6 rounded-xl bg-[#28784A] px-5 py-3 text-sm font-semibold text-white"
+              className="mt-6 rounded-xl bg-[#08785C] px-5 py-3 text-sm font-semibold text-white"
             >
               Tambah Sistem Pertama
             </button>
@@ -275,7 +275,7 @@ export default function AkuaponikkuPage() {
                 className="rounded-2xl border border-[#E2E9DF] bg-white p-5 shadow-sm"
               >
                 <div className="mb-4 flex items-start justify-between gap-3">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#EAF5EC] text-[#28784A]">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#E2F0E9] text-[#08785C]">
                     <Leaf size={24} />
                   </div>
                   <span className="rounded-full bg-[#F1F4EF] px-3 py-1 text-xs font-semibold text-[#526A58]">
@@ -285,14 +285,14 @@ export default function AkuaponikkuPage() {
 
                 <h3 className="text-lg font-bold">{system.name}</h3>
 
-                <p className="mt-2 flex items-center gap-2 text-sm text-[#6A7B6E]">
+                <p className="mt-2 flex items-center gap-2 text-sm text-[#62766D]">
                   <MapPin size={15} />
                   {system.location || "Lokasi belum diisi"}
                 </p>
 
                 <div className="mt-5 space-y-3 border-t border-[#EDF1EA] pt-4 text-sm">
                   <div className="flex items-center justify-between">
-                    <span className="flex items-center gap-2 text-[#6A7B6E]">
+                    <span className="flex items-center gap-2 text-[#62766D]">
                       <Droplets size={16} /> Tangki
                     </span>
                     <span className="font-semibold">
@@ -303,7 +303,7 @@ export default function AkuaponikkuPage() {
                   </div>
 
                   <div className="flex items-center justify-between">
-                    <span className="flex items-center gap-2 text-[#6A7B6E]">
+                    <span className="flex items-center gap-2 text-[#62766D]">
                       <Fish size={16} /> Ikan
                     </span>
                     <span className="font-semibold">
@@ -312,7 +312,7 @@ export default function AkuaponikkuPage() {
                   </div>
 
                   <div className="flex items-center justify-between">
-                    <span className="flex items-center gap-2 text-[#6A7B6E]">
+                    <span className="flex items-center gap-2 text-[#62766D]">
                       <Leaf size={16} /> Tanaman
                     </span>
                     <span className="font-semibold">
@@ -323,7 +323,7 @@ export default function AkuaponikkuPage() {
 
                 <Link
                   href={`/akuaponikku/${system.id}`}
-                  className="mt-5 flex items-center justify-center gap-2 rounded-xl bg-[#28784A] px-4 py-3 text-sm font-semibold text-white hover:bg-[#1E603A]"
+                  className="mt-5 flex items-center justify-center gap-2 rounded-xl bg-[#08785C] px-4 py-3 text-sm font-semibold text-white hover:bg-[#1E603A]"
                 >
                   Buka Monitoring
                   <ArrowRight size={17} />
@@ -355,7 +355,7 @@ export default function AkuaponikkuPage() {
                 <h2 id="create-system-title" className="text-xl font-bold">
                   Tambah Sistem Akuaponik
                 </h2>
-                <p className="mt-1 text-xs text-[#6A7B6E]">
+                <p className="mt-1 text-xs text-[#62766D]">
                   Daftarkan instalasi yang ingin kamu pantau.
                 </p>
               </div>
@@ -410,7 +410,7 @@ export default function AkuaponikkuPage() {
               <button
                 type="submit"
                 disabled={saving}
-                className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#28784A] py-3 font-semibold text-white disabled:opacity-60"
+                className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#08785C] py-3 font-semibold text-white disabled:opacity-60"
               >
                 {saving && <Loader2 size={18} className="animate-spin" />}
                 {saving ? "Menyimpan..." : "Simpan Sistem"}

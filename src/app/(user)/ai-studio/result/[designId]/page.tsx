@@ -154,7 +154,7 @@ export default function DesignResultPage() {
 
   if (!loaded) {
     return (
-      <main className="p-8 text-center text-[#718573]">
+      <main className="p-8 text-center text-[#62766D]">
         Memuat rancangan...
       </main>
     );
@@ -163,18 +163,18 @@ export default function DesignResultPage() {
   if (!design) {
     return (
       <main className="mx-auto max-w-3xl space-y-5 p-8 text-center">
-        <h1 className="text-2xl font-extrabold text-[#194D33]">
+        <h1 className="text-2xl font-extrabold text-[#005B45]">
           Rancangan Tidak Ditemukan
         </h1>
 
-        <p className="text-[#718573]">
+        <p className="text-[#62766D]">
           Data rancangan sementara tidak tersedia.
           Silakan buat rancangan baru.
         </p>
 
         <Link
           href="/ai-studio/input"
-          className="font-bold text-[#28784A] underline"
+          className="font-bold text-[#08785C] underline"
         >
           Buat Rancangan Baru
         </Link>
@@ -219,15 +219,15 @@ export default function DesignResultPage() {
     <main className="mx-auto max-w-6xl space-y-7 px-4 py-8 sm:px-6">
       <Link
         href="/ai-studio"
-        className="inline-flex items-center gap-2 text-sm font-bold text-[#28784A]"
+        className="inline-flex items-center gap-2 text-sm font-bold text-[#08785C]"
       >
         <ArrowLeft size={17} />
         Kembali ke AI Studio
       </Link>
 
       {/* HEADER */}
-      <section className="rounded-3xl bg-[#194D33] p-7 text-white sm:p-9">
-        <div className="flex items-center gap-2 text-[#FFDA57]">
+      <section className="rounded-3xl bg-[#005B45] p-7 text-white sm:p-9">
+        <div className="flex items-center gap-2 text-[#FF70AD]">
           <Sparkles size={20} />
 
           <span className="text-sm font-extrabold">
@@ -246,10 +246,10 @@ export default function DesignResultPage() {
       </section>
 
       {/* FOTO AFTER — HASIL UTAMA */}
-      <section className="overflow-hidden rounded-3xl border border-[#E0E9DD] bg-white shadow-sm">
+      <section className="overflow-hidden rounded-3xl border border-[#DCE6DB] bg-white shadow-sm">
         <div className="flex flex-col gap-4 p-5 sm:flex-row sm:items-center sm:justify-between sm:p-7">
           <div>
-            <div className="flex items-center gap-2 text-[#28784A]">
+            <div className="flex items-center gap-2 text-[#08785C]">
               <ImageIcon size={20} />
 
               <span className="text-xs font-extrabold uppercase tracking-wide">
@@ -257,11 +257,11 @@ export default function DesignResultPage() {
               </span>
             </div>
 
-            <h2 className="mt-2 text-2xl font-extrabold text-[#194D33]">
+            <h2 className="mt-2 text-2xl font-extrabold text-[#005B45]">
               Foto Hasil Desain
             </h2>
 
-            <p className="mt-2 text-sm text-[#718573]">
+            <p className="mt-2 text-sm text-[#62766D]">
               Rancangan akuaponik pada ruanganmu.
             </p>
           </div>
@@ -280,7 +280,7 @@ export default function DesignResultPage() {
                   ? "webp"
                   : "png"
               }`}
-              className="inline-flex items-center justify-center gap-2 rounded-2xl bg-[#194D33] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#246342]"
+              className="inline-flex items-center justify-center gap-2 rounded-2xl bg-[#005B45] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#246342]"
             >
               <Download size={18} />
               Simpan Foto
@@ -289,11 +289,11 @@ export default function DesignResultPage() {
         </div>
 
         {!imageLoaded ? (
-          <div className="flex min-h-80 items-center justify-center bg-[#F4F7ED] p-6 text-center text-sm text-[#718573]">
+          <div className="flex min-h-80 items-center justify-center bg-[#F3F7F2] p-6 text-center text-sm text-[#62766D]">
             Memuat foto hasil rancangan...
           </div>
         ) : afterImage ? (
-          <div className="bg-[#F4F7ED]">
+          <div className="bg-[#F3F7F2]">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={afterImage}
@@ -302,17 +302,17 @@ export default function DesignResultPage() {
             />
           </div>
         ) : (
-          <div className="flex min-h-80 flex-col items-center justify-center gap-3 bg-[#F4F7ED] p-6 text-center">
+          <div className="flex min-h-80 flex-col items-center justify-center gap-3 bg-[#F3F7F2] p-6 text-center">
             <ImageIcon
               size={36}
-              className="text-[#28784A]"
+              className="text-[#08785C]"
             />
 
-            <p className="font-bold text-[#194D33]">
+            <p className="font-bold text-[#005B45]">
               Foto hasil desain tidak tersedia
             </p>
 
-            <p className="max-w-md text-sm leading-6 text-[#718573]">
+            <p className="max-w-md text-sm leading-6 text-[#62766D]">
               Gambar mungkin belum tersimpan atau
               penyimpanan browser telah dibersihkan.
               Silakan generate ulang.
@@ -320,8 +320,8 @@ export default function DesignResultPage() {
           </div>
         )}
 
-        <div className="border-t border-[#E0E9DD] p-5 sm:p-6">
-          <p className="text-xs leading-6 text-[#718573]">
+        <div className="border-t border-[#DCE6DB] p-5 sm:p-6">
+          <p className="text-xs leading-6 text-[#62766D]">
             Foto ini merupakan visualisasi konsep
             yang dibuat AI. Ukuran dan keamanan
             instalasi belum diverifikasi secara teknis.
@@ -335,18 +335,18 @@ export default function DesignResultPage() {
           ({ icon: Icon, label, value }) => (
             <div
               key={label}
-              className="rounded-3xl border border-[#E0E9DD] bg-white p-6"
+              className="rounded-3xl border border-[#DCE6DB] bg-white p-6"
             >
               <Icon
                 size={25}
-                className="text-[#28784A]"
+                className="text-[#08785C]"
               />
 
-              <p className="mt-5 text-sm text-[#718573]">
+              <p className="mt-5 text-sm text-[#62766D]">
                 {label}
               </p>
 
-              <p className="mt-2 break-words text-lg font-extrabold capitalize text-[#194D33]">
+              <p className="mt-2 break-words text-lg font-extrabold capitalize text-[#005B45]">
                 {value}
               </p>
             </div>
@@ -356,28 +356,28 @@ export default function DesignResultPage() {
 
       {/* REKOMENDASI GEMINI */}
       {recommendation && (
-        <section className="rounded-3xl border border-[#E0E9DD] bg-white p-6 sm:p-8">
+        <section className="rounded-3xl border border-[#DCE6DB] bg-white p-6 sm:p-8">
           <div className="flex items-center gap-3">
             <Sparkles
               size={24}
-              className="text-[#28784A]"
+              className="text-[#08785C]"
             />
 
-            <h2 className="text-xl font-extrabold text-[#194D33]">
+            <h2 className="text-xl font-extrabold text-[#005B45]">
               Rekomendasi Desain AI
             </h2>
           </div>
 
-          <p className="mt-5 text-sm leading-8 text-[#536B57]">
+          <p className="mt-5 text-sm leading-8 text-[#526A5E]">
             {recommendation.summary}
           </p>
 
-          <div className="mt-6 rounded-2xl bg-[#F4F7ED] p-5">
-            <p className="text-xs font-bold text-[#718573]">
+          <div className="mt-6 rounded-2xl bg-[#F3F7F2] p-5">
+            <p className="text-xs font-bold text-[#62766D]">
               Sistem Akuaponik
             </p>
 
-            <p className="mt-2 text-lg font-extrabold text-[#194D33]">
+            <p className="mt-2 text-lg font-extrabold text-[#005B45]">
               {recommendation.systemType}
             </p>
           </div>
@@ -386,48 +386,48 @@ export default function DesignResultPage() {
 
       {/* PENEMPATAN */}
       {recommendation?.placement && (
-        <section className="rounded-3xl border border-[#E0E9DD] bg-white p-6 sm:p-8">
+        <section className="rounded-3xl border border-[#DCE6DB] bg-white p-6 sm:p-8">
           <div className="flex items-center gap-3">
             <MapPin
               size={23}
-              className="text-[#28784A]"
+              className="text-[#08785C]"
             />
 
-            <h2 className="text-xl font-extrabold text-[#194D33]">
+            <h2 className="text-xl font-extrabold text-[#005B45]">
               Rekomendasi Penempatan
             </h2>
           </div>
 
-          <p className="mt-4 text-sm leading-8 text-[#718573]">
+          <p className="mt-4 text-sm leading-8 text-[#62766D]">
             {recommendation.placement}
           </p>
         </section>
       )}
 
       {/* BIAYA */}
-      <section className="rounded-3xl border border-[#E0E9DD] bg-white p-6 sm:p-8">
-        <h2 className="text-xl font-extrabold text-[#194D33]">
+      <section className="rounded-3xl border border-[#DCE6DB] bg-white p-6 sm:p-8">
+        <h2 className="text-xl font-extrabold text-[#005B45]">
           Estimasi Biaya
         </h2>
 
-        <p className="mt-3 text-sm text-[#718573]">
+        <p className="mt-3 text-sm text-[#62766D]">
           Tipe sistem:{" "}
-          <strong className="text-[#194D33]">
+          <strong className="text-[#005B45]">
             {design.systemType}
           </strong>
         </p>
 
-        <div className="mt-6 rounded-2xl bg-[#F4F7ED] p-5">
-          <div className="flex items-center gap-2 font-bold text-[#194D33]">
+        <div className="mt-6 rounded-2xl bg-[#F3F7F2] p-5">
+          <div className="flex items-center gap-2 font-bold text-[#005B45]">
             <Calculator size={20} />
             Perkiraan Biaya Instalasi
           </div>
 
-          <p className="mt-3 text-3xl font-extrabold text-[#194D33]">
+          <p className="mt-3 text-3xl font-extrabold text-[#005B45]">
             {rupiah(design.estimatedCost)}
           </p>
 
-          <p className="mt-2 text-sm text-[#718573]">
+          <p className="mt-2 text-sm text-[#62766D]">
             Anggaranmu:{" "}
             {rupiah(design.input.budget)}
           </p>
@@ -463,14 +463,14 @@ export default function DesignResultPage() {
       {/* PERAWATAN */}
       {recommendation?.maintenance &&
         recommendation.maintenance.length > 0 && (
-          <section className="rounded-3xl border border-[#E0E9DD] bg-white p-6 sm:p-8">
+          <section className="rounded-3xl border border-[#DCE6DB] bg-white p-6 sm:p-8">
             <div className="flex items-center gap-3">
               <Wrench
                 size={23}
-                className="text-[#28784A]"
+                className="text-[#08785C]"
               />
 
-              <h2 className="text-xl font-extrabold text-[#194D33]">
+              <h2 className="text-xl font-extrabold text-[#005B45]">
                 Panduan Perawatan
               </h2>
             </div>
@@ -480,11 +480,11 @@ export default function DesignResultPage() {
                 (item, index) => (
                   <li
                     key={index}
-                    className="flex items-start gap-3 text-sm leading-7 text-[#718573]"
+                    className="flex items-start gap-3 text-sm leading-7 text-[#62766D]"
                   >
                     <CheckCircle2
                       size={18}
-                      className="mt-1 shrink-0 text-[#28784A]"
+                      className="mt-1 shrink-0 text-[#08785C]"
                     />
 
                     <span>{item}</span>
@@ -496,14 +496,14 @@ export default function DesignResultPage() {
         )}
 
       {/* KEAMANAN */}
-      <section className="rounded-3xl border border-[#E0E9DD] bg-white p-6 sm:p-8">
+      <section className="rounded-3xl border border-[#DCE6DB] bg-white p-6 sm:p-8">
         <div className="flex items-center gap-3">
           <ShieldAlert
             size={23}
             className="text-amber-700"
           />
 
-          <h2 className="text-xl font-extrabold text-[#194D33]">
+          <h2 className="text-xl font-extrabold text-[#005B45]">
             Catatan Keamanan
           </h2>
         </div>
@@ -512,9 +512,9 @@ export default function DesignResultPage() {
           {design.notes.map((note, index) => (
             <li
               key={index}
-              className="flex items-start gap-3 text-sm leading-7 text-[#718573]"
+              className="flex items-start gap-3 text-sm leading-7 text-[#62766D]"
             >
-              <span className="font-bold text-[#28784A]">
+              <span className="font-bold text-[#08785C]">
                 •
               </span>
 
@@ -524,7 +524,7 @@ export default function DesignResultPage() {
         </ul>
       </section>
 
-      <p className="text-xs leading-6 text-[#718573]">
+      <p className="text-xs leading-6 text-[#62766D]">
         Hasil ini merupakan konsep visual dan
         rekomendasi awal berbantuan AI. Volume
         tangki dan estimasi biaya bersifat
